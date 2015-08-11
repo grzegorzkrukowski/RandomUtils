@@ -1,2 +1,2 @@
 # random-utils
-Utilities to work with random number in Objective-C
+Utilities to work with random numbers in Objective-C
