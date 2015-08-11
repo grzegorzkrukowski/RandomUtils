@@ -8,12 +8,23 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "GKRandomizer.h"
+
+//testing random numbers usually required few iterations to gather results, to make sure tests are not failing randomly
+#define ITERATIONS_SINGLE 1
+#define ITERATIONS_FEW 100
+#define ITERATIONS_MANY 1000
 
 @interface GKRandomizerTests : XCTestCase
 
 @end
 
 @implementation GKRandomizerTests
+
+- (unsigned) seed
+{
+    return arc4random_uniform(INT_MAX);
+}
 
 - (void)setUp {
     [super setUp];
@@ -25,9 +36,56 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+- (void) testRandomIntBetween
+{
+    [self testRandomIntBetweenSeeded:NO];
 }
+
+- (void) testRandomIntBetweenSeeded
+{
+    [self testRandomIntBetweenSeeded:YES];
+}
+
+- (void) testRandomIntBetweenSeeded:(BOOL) seeded
+{
+    //keeping range small, to make sure testing border hits always works
+    int min = 5;
+    int max = 10;
+
+    //flags to check if randomizer hit the borders of given range
+    BOOL minRandom = NO;
+    BOOL maxRandom = NO;
+    int random = 0;
+    for (int i = 0; i < ITERATIONS_MANY; i++)
+    {
+        if(seeded)
+        {
+            random = [GKRandomizer randomIntBetweenMin:min andMax:max andSeed:[self seed]];
+        }
+        else
+        {
+            random = [GKRandomizer randomIntBetweenMin:min andMax:max];
+        }
+
+        if(random == min)
+        {
+            minRandom = YES;
+        }
+
+        if(random == max)
+        {
+            maxRandom = YES;
+        }
+
+        //check if it's in range
+        XCTAssertGreaterThanOrEqual(random, min);
+        XCTAssertLessThanOrEqual(random, max);
+    }
+
+    //check if borders were randomed
+    XCTAssertTrue(minRandom);
+    XCTAssertTrue(maxRandom);
+}
+
 
 @end
