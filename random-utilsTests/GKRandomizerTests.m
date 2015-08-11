@@ -87,5 +87,39 @@
     XCTAssertTrue(maxRandom);
 }
 
+- (void) testRandomFloatBetween
+{
+    [self testRandomFloatBetweenSeeded:NO];
+}
+
+- (void) testRandomFloatBetweenSeeded
+{
+    [self testRandomFloatBetweenSeeded:YES];
+}
+
+- (void) testRandomFloatBetweenSeeded:(BOOL) seeded
+{
+    //for floats we just check if they are in range, can make range bigger
+    float min = 5.0f;
+    float max = 1005.0f;
+
+    float random = 0;
+    for (int i = 0; i < ITERATIONS_MANY; i++)
+    {
+        if(seeded)
+        {
+            random = [GKRandomizer randomFloatBetweenMin:min andMax:max andSeed:[self seed]];
+        }
+        else
+        {
+            random = [GKRandomizer randomFloatBetweenMin:min andMax:max];
+        }
+
+        //check if it's in range
+        XCTAssertGreaterThanOrEqual(random, min);
+        XCTAssertLessThanOrEqual(random, max);
+    }
+}
+
 
 @end

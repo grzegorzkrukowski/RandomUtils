@@ -41,11 +41,27 @@
     }
 }
 
++ (float) randomFloatBetweenMin:(float)min andMax:(float)max seeded:(BOOL) seeded;
+{
+    //float values are scaled up and send as integers to make calculation of range for floats possible
+    int scaleUp = 1000;
+    int minScaled = min * scaleUp;
+    int maxScaled = max * scaleUp;
+
+    float randomValue = (float) [[self class] randomIntBetweenMin:minScaled andMax:maxScaled andSeeded:seeded];
+    return (randomValue / (float)scaleUp);
+}
+
 #pragma mark - Not Seeded Methods
 
 + (int) randomIntBetweenMin:(int)min andMax:(int)max
 {
     return [[self class] randomIntBetweenMin:min andMax:max andSeeded:NO];
+}
+
++ (float) randomFloatBetweenMin:(float)min andMax:(float)max;
+{
+    return [[self class] randomFloatBetweenMin:min andMax:max seeded:NO];
 }
 
 #pragma mark - Seeded Methods
@@ -54,6 +70,12 @@
 {
     [[self class] setSeed:seed];
     return [[self class] randomIntBetweenMin:min andMax:max andSeeded:YES];
+}
+
++ (float) randomFloatBetweenMin:(float)min andMax:(float)max andSeed:(unsigned int)seed;
+{
+    [[self class] setSeed:seed];
+    return [[self class] randomFloatBetweenMin:min andMax:max seeded:YES];
 }
 
 @end
