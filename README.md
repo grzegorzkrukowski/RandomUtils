@@ -5,7 +5,7 @@ This set of utils allows to easily generate random numbers in desired range, sel
 
 All allows generate random sequences that are repeatable by using their version with seed.
 
-```ios
+```Objective-C
 unsigned seed = [GKRandomizer randomSeed];
 [GKRandomizer setSeed:seed];
 [GKRandomizer randomIntBetweenMin:min andMax:max useSeed:YES];
