@@ -34,6 +34,15 @@
 
 + (float) randomFloatBetweenMin:(float)min andMax:(float)max;
 
+/*!
+ * Checks if random event should happen based on a given probability from 0.0f to 100.0f (0.0f - never, 100.0f - always)
+ *
+ * @param chance Desired probability for an event
+ * @return results BOOL YES if event should occur, which means random probability > desired chance
+ */
+
++ (BOOL) randomEventOccurs:(float) chance;
+
 #pragma mark - Methods using seed
 
 /*!
@@ -75,5 +84,14 @@
  */
 
 + (float) randomSeedFloatBetweenMin:(float)min andMax:(float)max;
+
+/*!
+ * Checks if random event should happen based on a given probability from 0.0f to 100.0f (0.0f - never, 100.0f - always)
+ *
+ * @param chance Desired probability for an event
+ * @return results BOOL YES if event should occur, which means random probability > desired chance
+ */
+
++ (BOOL) randomSeedEventOccurs:(float) chance;
 
 @end

@@ -94,10 +94,10 @@
 
     int min = 0;
     int max = 1000;
-    
+
     //generate first number
     int firstRandom = [GKRandomizer randomSeedIntBetweenMin:min andMax:max];
-    
+
     //every other number should be same as first one if we reseed the generator
     for (int i = 0; i < ITERATIONS_FEW; i++)
     {
@@ -159,6 +159,20 @@
         XCTAssertGreaterThanOrEqual(random, min);
         XCTAssertLessThanOrEqual(random, max);
     }
+}
+
+- (void) testRandomEventOccurs
+{
+    int numberOfOccurences = 0;
+    for (int i = 0; i < ITERATIONS_FEW; i++)
+    {
+        XCTAssertTrue([GKRandomizer randomEventOccurs:100.0f]);
+        XCTAssertFalse([GKRandomizer randomEventOccurs:0.0f]);
+        numberOfOccurences += [GKRandomizer randomEventOccurs:50.0f];
+    }
+
+    //50.0f chance should be more less equal to half of iterations
+    XCTAssertEqualWithAccuracy(numberOfOccurences, ITERATIONS_FEW * 0.5f, ITERATIONS_FEW / 0.1f);
 }
 
 @end

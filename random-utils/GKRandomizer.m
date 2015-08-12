@@ -53,6 +53,22 @@
     return (randomValue / (float)scaleUp);
 }
 
++ (BOOL) randomEventOccurs:(float) chance seeded:(BOOL) seeded
+{
+    if(chance == 0.0f)
+    {
+        return NO;
+    }
+
+    if(chance == 100.0f)
+    {
+        return YES;
+    }
+
+    float randomedValue = [[self class] randomFloatBetweenMin:0.0f andMax:100.0f seeded:seeded];
+    return chance >= randomedValue;
+}
+
 #pragma mark - Not Seeded Methods
 
 + (int) randomIntBetweenMin:(int)min andMax:(int)max
@@ -65,6 +81,11 @@
     return [[self class] randomFloatBetweenMin:min andMax:max seeded:NO];
 }
 
++ (BOOL) randomEventOccurs:(float) chance
+{
+    return [[self class] randomEventOccurs:chance seeded:NO];
+}
+
 #pragma mark - Seeded Methods
 
 + (int) randomSeedIntBetweenMin:(int)min andMax:(int)max
@@ -75,6 +96,11 @@
 + (float) randomSeedFloatBetweenMin:(float)min andMax:(float)max
 {
     return [[self class] randomFloatBetweenMin:min andMax:max seeded:YES];
+}
+
++ (BOOL) randomSeedEventOccurs:(float) chance
+{
+    return [[self class] randomEventOccurs:chance seeded:NO];
 }
 
 @end
