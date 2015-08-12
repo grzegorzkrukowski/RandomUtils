@@ -187,4 +187,24 @@
     }
 }
 
+- (void) testRandomElementFromArray
+{
+    XCTAssertNil([GKRandomizer randomElementFromArray:nil useSeed:NO]);
+    XCTAssertNil([GKRandomizer randomElementFromArray:nil useSeed:YES]);
+
+    NSArray* array = @[@"a", @"b", @"c", @"d"];
+    XCTAssertNotNil([GKRandomizer randomElementFromArray:array useSeed:NO]);
+    XCTAssertNotNil([GKRandomizer randomElementFromArray:array useSeed:YES]);
+}
+
+- (void) testRandomElementFromDictionary
+{
+    XCTAssertNil([GKRandomizer randomElementFromDictionary:nil useSeed:NO]);
+    XCTAssertNil([GKRandomizer randomElementFromDictionary:nil useSeed:YES]);
+
+    NSDictionary* dict = @{ @"a" : @"a", @"b" : @"b", @"c" : @"c" };
+    XCTAssertNotNil([GKRandomizer randomElementFromDictionary:dict useSeed:NO]);
+    XCTAssertNotNil([GKRandomizer randomElementFromDictionary:dict useSeed:YES]);
+}
+
 @end

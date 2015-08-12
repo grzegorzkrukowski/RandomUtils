@@ -134,6 +134,46 @@
  */
 + (NSString *) randomStringWithCharctersFromString:(NSString*) charset andLength: (int) length useSeed:(BOOL) useSeed;
 
+#pragma mark - Random elements methods
+
+/*!
+ * Returns random element from an array
+ *
+ * @param array array with elements
+ * @return name random element (can be nil if array was nil)
+ */
+
++ (id) randomElementFromArray:(NSArray*) array;
+
+/*!
+ * Returns random element from an array
+ *
+ * @param array array with elements
+ * @param useSeed BOOL indicates if random generator should use seed
+ * @return name random element (can be nil if array was nil)
+ */
+
++ (id) randomElementFromArray:(NSArray*) array useSeed:(BOOL) useSeed;
+
+/*!
+ * Returns random element from a dictionary
+ *
+ * @param dictionary dictionary with elements
+ * @return name random element (can be nil if array was nil)
+ */
+
++ (id) randomElementFromDictionary:(NSDictionary*) dictionary;
+
+/*!
+ * Returns random element from a dictionary
+ *
+ * @param dictionary dictionary with elements
+ * @param useSeed BOOL indicates if random generator should use seed
+ * @return name random element (can be nil if array was nil)
+ */
+
++ (id) randomElementFromDictionary:(NSDictionary*) dictionary useSeed:(BOOL) useSeed;
+
 #pragma mark - Seed helpers
 
 /*!

@@ -113,6 +113,33 @@
     return randomString;
 }
 
+#pragma mark - Random elements methods
+
++ (id) randomElementFromArray:(NSArray*) array
+{
+    return [[self class] randomElementFromArray:array useSeed:NO];
+}
+
++ (id) randomElementFromArray:(NSArray*) array useSeed:(BOOL) useSeed
+{
+    if([array count] > 0)
+    {
+        return [array objectAtIndex:[[self class] randomIntBetweenMin:0 andMax:((int) [array count] - 1) useSeed:useSeed]];
+    }
+
+    return nil;
+}
+
++ (id) randomElementFromDictionary:(NSDictionary*) dictionary
+{
+    return [[self class] randomElementFromDictionary:dictionary useSeed:NO];
+}
+
++ (id) randomElementFromDictionary:(NSDictionary*) dictionary useSeed:(BOOL) useSeed
+{
+    return [[self class] randomElementFromArray:[dictionary allKeys] useSeed:useSeed];
+}
+
 #pragma mark - Seed helpers
 
 + (unsigned) randomSeed
