@@ -33,17 +33,17 @@
 
 - (void) testRandomIntBetween
 {
-    [self testRandomIntBetweenSeeded:NO];
+    [self testRandomIntBetweenUsingSeed:NO];
 }
 
 - (void) testRandomIntBetweenSeeded
 {
-    [self testRandomIntBetweenSeeded:YES];
+    [self testRandomIntBetweenUsingSeed:YES];
 }
 
-- (void) testRandomIntBetweenSeeded:(BOOL) seeded
+- (void) testRandomIntBetweenUsingSeed:(BOOL) useSeed
 {
-    if(seeded)
+    if(useSeed)
     {
         [GKRandomizer setSeed:[GKRandomizer randomSeed]];
     }
@@ -58,14 +58,7 @@
     int random = 0;
     for (int i = 0; i < ITERATIONS_MANY; i++)
     {
-        if(seeded)
-        {
-            random = [GKRandomizer randomSeedIntBetweenMin:min andMax:max];
-        }
-        else
-        {
-            random = [GKRandomizer randomIntBetweenMin:min andMax:max];
-        }
+        random = [GKRandomizer randomIntBetweenMin:min andMax:max useSeed:useSeed];
 
         if(random == min)
         {
@@ -96,13 +89,13 @@
     int max = 1000;
 
     //generate first number
-    int firstRandom = [GKRandomizer randomSeedIntBetweenMin:min andMax:max];
+    int firstRandom = [GKRandomizer randomIntBetweenMin:min andMax:max useSeed:YES];
 
     //every other number should be same as first one if we reseed the generator
     for (int i = 0; i < ITERATIONS_FEW; i++)
     {
         [GKRandomizer setSeed:seed];
-        int nextRandom = [GKRandomizer randomSeedIntBetweenMin:min andMax:max];
+        int nextRandom = [GKRandomizer randomIntBetweenMin:min andMax:max useSeed:YES];
         XCTAssertEqual(firstRandom, nextRandom);
     }
 
@@ -112,7 +105,7 @@
     //still need to few iterations to make sure it's not randomly failing
     for (int i = 0; i < ITERATIONS_FEW; i++)
     {
-        int nextRandom = [GKRandomizer randomSeedIntBetweenMin:min andMax:max];
+        int nextRandom = [GKRandomizer randomIntBetweenMin:min andMax:max useSeed:YES];
         if(nextRandom != firstRandom)
         {
             same = NO;
@@ -124,17 +117,17 @@
 
 - (void) testRandomFloatBetween
 {
-    [self testRandomFloatBetweenSeeded:NO];
+    [self testRandomFloatBetweenUsingSeed:NO];
 }
 
 - (void) testRandomFloatBetweenSeeded
 {
-    [self testRandomFloatBetweenSeeded:YES];
+    [self testRandomFloatBetweenUsingSeed:YES];
 }
 
-- (void) testRandomFloatBetweenSeeded:(BOOL) seeded
+- (void) testRandomFloatBetweenUsingSeed:(BOOL) useSeed
 {
-    if(seeded)
+    if(useSeed)
     {
         [GKRandomizer setSeed:[GKRandomizer randomSeed]];
     }
@@ -146,15 +139,7 @@
     float random = 0;
     for (int i = 0; i < ITERATIONS_MANY; i++)
     {
-        if(seeded)
-        {
-            random = [GKRandomizer randomSeedFloatBetweenMin:min andMax:max];
-        }
-        else
-        {
-            random = [GKRandomizer randomFloatBetweenMin:min andMax:max];
-        }
-
+        random = [GKRandomizer randomFloatBetweenMin:min andMax:max useSeed:useSeed];
         //check if it's in range
         XCTAssertGreaterThanOrEqual(random, min);
         XCTAssertLessThanOrEqual(random, max);
