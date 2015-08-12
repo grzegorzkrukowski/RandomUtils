@@ -50,3 +50,13 @@ ARC
 ------------------
 
 Those tools requires ARC enabled.
+
+Author
+------------------
+
+Grzegorz Krukowski, grkrukowski@gmail.com
+
+License
+------------------
+
+GKRandomizer is available under the MIT license. See the LICENSE file for more info.
