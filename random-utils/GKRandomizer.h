@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 /*!
  * Randomizer utils
@@ -218,6 +219,11 @@
  *  @return key randomized key
  */
 + (id) randomKeyBasedOnWeights:(NSDictionary*) weights useSeed:(BOOL) useSeed;
+
+#pragma mark - Random Color
+
++ (UIColor*) randomColor;
++ (UIColor*) randomColorUseSeed:(BOOL) useSeed;
 
 #pragma mark - Seed helpers
 

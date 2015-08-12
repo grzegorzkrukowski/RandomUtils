@@ -208,6 +208,21 @@
     return key;
 }
 
+#pragma mark - Random Color
+
++ (UIColor*) randomColor
+{
+    return [[self class] randomColorUseSeed:NO];
+}
+
++ (UIColor*) randomColorUseSeed:(BOOL)useSeed
+{
+    CGFloat hue = [[self class] randomIntBetweenMin:0 andMax:255];
+    CGFloat saturation = [[self class] randomIntBetweenMin:0 andMax:255];
+    CGFloat brightness = [[self class] randomIntBetweenMin:0 andMax:255];
+    return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
+}
+
 #pragma mark - Seed helpers
 
 + (unsigned) randomSeed

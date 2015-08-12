@@ -238,4 +238,10 @@
     }
 }
 
+- (void) testRandomColor
+{
+    UIColor* randomColor = [GKRandomizer randomColor];
+    XCTAssertNotNil(randomColor);
+}
+
 @end
