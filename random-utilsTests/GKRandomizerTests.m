@@ -87,6 +87,41 @@
     XCTAssertTrue(maxRandom);
 }
 
+- (void) testSeeding
+{
+    unsigned seed = [GKRandomizer randomSeed];
+    [GKRandomizer setSeed:seed];
+
+    int min = 0;
+    int max = 1000;
+    
+    //generate first number
+    int firstRandom = [GKRandomizer randomSeedIntBetweenMin:min andMax:max];
+    
+    //every other number should be same as first one if we reseed the generator
+    for (int i = 0; i < ITERATIONS_FEW; i++)
+    {
+        [GKRandomizer setSeed:seed];
+        int nextRandom = [GKRandomizer randomSeedIntBetweenMin:min andMax:max];
+        XCTAssertEqual(firstRandom, nextRandom);
+    }
+
+    //one of next numbers should be different than first random if we do not set seed
+    BOOL same = YES;
+
+    //still need to few iterations to make sure it's not randomly failing
+    for (int i = 0; i < ITERATIONS_FEW; i++)
+    {
+        int nextRandom = [GKRandomizer randomSeedIntBetweenMin:min andMax:max];
+        if(nextRandom != firstRandom)
+        {
+            same = NO;
+            break;
+        }
+    }
+    XCTAssertFalse(same);
+}
+
 - (void) testRandomFloatBetween
 {
     [self testRandomFloatBetweenSeeded:NO];
@@ -125,6 +160,5 @@
         XCTAssertLessThanOrEqual(random, max);
     }
 }
-
 
 @end
