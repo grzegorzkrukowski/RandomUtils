@@ -96,7 +96,7 @@
 + (NSString *) randomStringNameWithLength:(int) length;
 
 /*!
- * Generates random name with desired length without seed. Name is generated using a-zA-z0-9 characters
+ * Generates random name with desired length. Name is generated using a-zA-z0-9 characters
  *
  * @param length desired length of string
  * @param useSeed BOOL indicates if random generator should use seed
@@ -180,6 +180,44 @@
  */
 
 + (id) randomElementFromDictionary:(NSDictionary*) dictionary useSeed:(BOOL) useSeed;
+
+#pragma mark - Weigthed randomizer methods
+
+/**
+ *  Randomize index value based on weights provided in array without seed
+ *
+ *  @param weights NSArray with NSNumbers with corresponding weights
+ *
+ *  @return index randomized index
+ */
++ (int) randomIndexWeighted:(NSArray *)weights;
+
+/**
+ *  Randomize index value based on weights provided in array
+ *
+ *  @param weights NSArray with NSNumbers with corresponding weights
+ *  @param useSeed BOOL indicates if random generator should use seed
+ *  @return index randomized index
+ */
++ (int) randomIndexWeighted:(NSArray *)weights useSeed:(BOOL) useSeed;
+
+/**
+ *  Randomize key based on weights provided in NSDictionary as key values (NSNumbers) without seed
+ *
+ *  @param weights NSDictionary with NSNumber values representing weight for key
+ *
+ *  @return key randomized key
+ */
++ (id) randomKeyBasedOnWeights:(NSDictionary*) weights;
+
+/**
+ *  Randomize key based on weights provided in NSDictionary as key values (NSNumbers)
+ *
+ *  @param weights NSDictionary with NSNumber values representing weight for key
+ *  @param useSeed BOOL indicates if random generator should use seed
+ *  @return key randomized key
+ */
++ (id) randomKeyBasedOnWeights:(NSDictionary*) weights useSeed:(BOOL) useSeed;
 
 #pragma mark - Seed helpers
 

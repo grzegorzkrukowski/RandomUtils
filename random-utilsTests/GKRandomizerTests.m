@@ -207,4 +207,35 @@
     XCTAssertNotNil([GKRandomizer randomElementFromDictionary:dict useSeed:YES]);
 }
 
+- (void) testWeightRandomizer
+{
+    NSArray* weights = @[@(75), @(24), @(1)];
+    NSMutableArray* results = [NSMutableArray array];
+
+    float chancesSum = 0.0f;
+    for(int i = 0; i < weights.count; i++)
+    {
+        chancesSum += [[weights objectAtIndex:i] intValue];
+        [results addObject:[NSNumber numberWithInt:0]];
+    }
+
+    int testsCount = ITERATIONS_MANY;
+    for(int i = 0; i < testsCount; i++)
+    {
+        int index = [GKRandomizer randomIndexWeighted:weights];
+        NSNumber* number = [results objectAtIndex:index];
+        [results replaceObjectAtIndex:index withObject:[NSNumber numberWithInt:[number intValue]+1]];
+    }
+
+    for(int i=0 ; i < weights.count; i++)
+    {
+        NSNumber* weight = [weights objectAtIndex:i];
+        NSNumber* result = [results objectAtIndex:i];
+
+        float orginalChance = [weight floatValue] / chancesSum;
+        float resultChance = [result floatValue] / testsCount;
+        XCTAssertEqualWithAccuracy(orginalChance, resultChance, 0.1f);
+    }
+}
+
 @end

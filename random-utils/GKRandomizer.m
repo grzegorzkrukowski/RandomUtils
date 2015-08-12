@@ -140,6 +140,74 @@
     return [[self class] randomElementFromArray:[dictionary allKeys] useSeed:useSeed];
 }
 
+#pragma mark - Weigthed randomizer methods
+
++ (int) randomIndexWeighted:(NSArray *)weights
+{
+    return [[self class] randomIndexWeighted:weights useSeed:NO];
+}
+
++ (int) randomIndexWeighted:(NSArray *)weights useSeed:(BOOL) useSeed
+{
+    int weightSum = 0;
+    for(int weightIndex = 0; weightIndex < weights.count; weightIndex++)
+    {
+        weightSum += [[weights objectAtIndex:weightIndex] intValue];
+    }
+
+    int randomNumber = [[self class] randomIntBetweenMin:0 andMax:weightSum useSeed:useSeed];
+
+    int elementIndex = 0;
+    int currentWeightSum = 0;
+    for(elementIndex = 0; elementIndex < weights.count; elementIndex++)
+    {
+        int elementWeight = [[weights objectAtIndex:elementIndex] intValue];
+        currentWeightSum += elementWeight;
+
+        if(currentWeightSum >= randomNumber)
+        {
+            break;
+        }
+    }
+    
+    return elementIndex;
+}
+
++ (id) randomKeyBasedOnWeights:(NSDictionary*) weights
+{
+    return [[self class] randomKeyBasedOnWeights:weights useSeed:NO];
+}
+
++ (id) randomKeyBasedOnWeights:(NSDictionary*) weights useSeed:(BOOL) useSeed
+{
+    int weightSum = 0;
+    id key;
+    for (key in weights) {
+        weightSum += [[weights objectForKey:key] intValue];
+    }
+
+    //Always uses seeded random, as long as we don't need option to use arc4random and random on same scene
+    int randomNumber = [[self class] randomIntBetweenMin:0 andMax:weightSum useSeed:useSeed];
+    int currentWeightSum = 0;
+
+    key = nil;
+    for (key in weights) {
+        
+        weightSum += [[weights objectForKey:key] intValue];
+        
+        int elementWeight = [[weights objectForKey:key] intValue];
+        currentWeightSum += elementWeight;
+        
+        if(currentWeightSum >= randomNumber)
+        {
+            break;
+        }
+        
+    }
+
+    return key;
+}
+
 #pragma mark - Seed helpers
 
 + (unsigned) randomSeed
