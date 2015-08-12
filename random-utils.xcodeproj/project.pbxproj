@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		B2B1FDFB1B7B5CE10091567D /* Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B2B1FDFC1B7B5CE10091567D /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildPhases = (
+				B2B1FDFF1B7B5CF40091567D /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Documentation;
+			productName = Documentation;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		B2B1FDE11B7AA28A0091567D /* GKRandomizer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B2B1FDE01B7AA28A0091567D /* GKRandomizer.h */; };
 		B2B1FDE31B7AA28A0091567D /* GKRandomizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B1FDE21B7AA28A0091567D /* GKRandomizer.m */; };
@@ -161,6 +175,9 @@
 					B2B1FDE71B7AA28A0091567D = {
 						CreatedOnToolsVersion = 6.4;
 					};
+					B2B1FDFB1B7B5CE10091567D = {
+						CreatedOnToolsVersion = 6.4;
+					};
 				};
 			};
 			buildConfigurationList = B2B1FDD81B7AA28A0091567D /* Build configuration list for PBXProject "random-utils" */;
@@ -177,6 +194,7 @@
 			targets = (
 				B2B1FDDC1B7AA28A0091567D /* random-utils */,
 				B2B1FDE71B7AA28A0091567D /* random-utilsTests */,
+				B2B1FDFB1B7B5CE10091567D /* Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -190,6 +208,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B2B1FDFF1B7B5CF40091567D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#appledoc Xcode script\n# Start constants\ncompany=\"Grzegorz Krukowski\";\ncompanyID=\"com.grzegorzkrukowski\";\ncompanyURL=\"https://github.com/grzegorzkrukowski\";\ntarget=\"iphoneos\";\noutputPath=\"Docs\";\n# End constants\n/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--output \"${outputPath}\" \\\n--logformat xcode \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--exit-threshold 2 \\\n\"${PROJECT_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B2B1FDD91B7AA28A0091567D /* Sources */ = {
@@ -347,6 +381,20 @@
 			};
 			name = Release;
 		};
+		B2B1FDFD1B7B5CE10091567D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B2B1FDFE1B7B5CE10091567D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -376,6 +424,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		B2B1FDFC1B7B5CE10091567D /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2B1FDFD1B7B5CE10091567D /* Debug */,
+				B2B1FDFE1B7B5CE10091567D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>GKRandomizer Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">random-utils </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Grzegorz Krukowski</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/randomElementFromArray:">+ randomElementFromArray:</option>
+		
+		<option value="//api/name/randomElementFromArray:useSeed:">+ randomElementFromArray:useSeed:</option>
+		
+		<option value="//api/name/randomElementFromDictionary:">+ randomElementFromDictionary:</option>
+		
+		<option value="//api/name/randomElementFromDictionary:useSeed:">+ randomElementFromDictionary:useSeed:</option>
+		
+		<option value="//api/name/randomEventOccurs:">+ randomEventOccurs:</option>
+		
+		<option value="//api/name/randomEventOccurs:useSeed:">+ randomEventOccurs:useSeed:</option>
+		
+		<option value="//api/name/randomFloatBetweenMin:andMax:">+ randomFloatBetweenMin:andMax:</option>
+		
+		<option value="//api/name/randomFloatBetweenMin:andMax:useSeed:">+ randomFloatBetweenMin:andMax:useSeed:</option>
+		
+		<option value="//api/name/randomIntBetweenMin:andMax:">+ randomIntBetweenMin:andMax:</option>
+		
+		<option value="//api/name/randomIntBetweenMin:andMax:useSeed:">+ randomIntBetweenMin:andMax:useSeed:</option>
+		
+		<option value="//api/name/randomSeed">+ randomSeed</option>
+		
+		<option value="//api/name/randomStringNameWithLength:">+ randomStringNameWithLength:</option>
+		
+		<option value="//api/name/randomStringNameWithLength:useSeed:">+ randomStringNameWithLength:useSeed:</option>
+		
+		<option value="//api/name/randomStringNumberWithLength:">+ randomStringNumberWithLength:</option>
+		
+		<option value="//api/name/randomStringNumberWithLength:useSeed:">+ randomStringNumberWithLength:useSeed:</option>
+		
+		<option value="//api/name/randomStringWithCharctersFromString:andLength:">+ randomStringWithCharctersFromString:andLength:</option>
+		
+		<option value="//api/name/randomStringWithCharctersFromString:andLength:useSeed:">+ randomStringWithCharctersFromString:andLength:useSeed:</option>
+		
+		<option value="//api/name/setSeed:">+ setSeed:</option>
+		
+	</optgroup>
+	
+
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">GKRandomizer Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>GKRandomizer.h<br />GKRandomizer.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Randomizer utils</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/randomIntBetweenMin:andMax:useSeed:" title="randomIntBetweenMin:andMax:useSeed:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/randomIntBetweenMin:andMax:useSeed:">+&nbsp;randomIntBetweenMin:andMax:useSeed:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns random int between given minimum (inclusive) and maximum (inclusive) and option to use seed</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (int)randomIntBetweenMin:(int)<em>min</em> andMax:(int)<em>max</em> useSeed:(BOOL)<em>useSeed</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>min</code></th>
+						<td><p>Minimum value</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>max</code></th>
+						<td><p>Maximum value</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>useSeed</code></th>
+						<td><p>BOOL indicates if random generator should use seed</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>random int between min (inclusive) and max (inclusive)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/setSeed:">+ setSeed:</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GKRandomizer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/randomIntBetweenMin:andMax:" title="randomIntBetweenMin:andMax:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/randomIntBetweenMin:andMax:">+&nbsp;randomIntBetweenMin:andMax:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns random int between given minimum (inclusive) and maximum (inclusive) without seed</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (int)randomIntBetweenMin:(int)<em>min</em> andMax:(int)<em>max</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>min</code></th>
+						<td><p>Minimum value</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>max</code></th>
+						<td><p>Maximum value</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>random int between min (inclusive) and max (inclusive)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GKRandomizer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/randomFloatBetweenMin:andMax:useSeed:" title="randomFloatBetweenMin:andMax:useSeed:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/randomFloatBetweenMin:andMax:useSeed:">+&nbsp;randomFloatBetweenMin:andMax:useSeed:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns random float between given minimum (inclusive) and maximum (inclusive) and option to use seed</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (float)randomFloatBetweenMin:(float)<em>min</em> andMax:(float)<em>max</em> useSeed:(BOOL)<em>useSeed</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>min</code></th>
+						<td><p>Minimum value</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>max</code></th>
+						<td><p>Maximum value</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>useSeed</code></th>
+						<td><p>BOOL indicates if random generator should use seed</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>random float between min (inclusive) and max (inclusive)</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>It&rsquo;s guarantee that values will never go outside given range, but for floats it may never hit the minimum or maxmimum value due to float precision.
+Problem of calculating range is solved by scaling up float values.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/setSeed:">+ setSeed:</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GKRandomizer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/randomFloatBetweenMin:andMax:" title="randomFloatBetweenMin:andMax:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/randomFloatBetweenMin:andMax:">+&nbsp;randomFloatBetweenMin:andMax:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns random float between given minimum (inclusive) and maximum (inclusive) without seed</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (float)randomFloatBetweenMin:(float)<em>min</em> andMax:(float)<em>max</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>min</code></th>
+						<td><p>Minimum value</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>max</code></th>
+						<td><p>Maximum value</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>random float between min (inclusive) and max (inclusive)</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>It&rsquo;s guarantee that values will never go outside given range, but for floats it may never hit the minimum or maxmimum value due to float precision.
+Problem of calculating range is solved by scaling up float values.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GKRandomizer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/randomEventOccurs:useSeed:" title="randomEventOccurs:useSeed:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/randomEventOccurs:useSeed:">+&nbsp;randomEventOccurs:useSeed:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Checks if random event should happen based on a given probability from 0.0f to 100.0f (0.0f - never, 100.0f - always) and option to use seed</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BOOL)randomEventOccurs:(float)<em>chance</em> useSeed:(BOOL)<em>useSeed</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>chance</code></th>
+						<td><p>Desired probability for an event</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>useSeed</code></th>
+						<td><p>BOOL indicates if random generator should use seed</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>results BOOL YES if event should occur, which means random probability > desired chance</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/setSeed:">+ setSeed:</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GKRandomizer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/randomEventOccurs:" title="randomEventOccurs:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/randomEventOccurs:">+&nbsp;randomEventOccurs:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Checks if random event should happen based on a given probability from 0.0f to 100.0f (0.0f - never, 100.0f - always) without seed</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BOOL)randomEventOccurs:(float)<em>chance</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>chance</code></th>
+						<td><p>Desired probability for an event</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>results BOOL YES if event should occur, which means random probability > desired chance</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GKRandomizer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/randomStringNameWithLength:" title="randomStringNameWithLength:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/randomStringNameWithLength:">+&nbsp;randomStringNameWithLength:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Generates random name with desired length without seed. Name is generated using a-zA-z0-9 characters</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)randomStringNameWithLength:(int)<em>length</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>length</code></th>
+						<td><p>desired length of string</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>name random name</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GKRandomizer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/randomStringNameWithLength:useSeed:" title="randomStringNameWithLength:useSeed:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/randomStringNameWithLength:useSeed:">+&nbsp;randomStringNameWithLength:useSeed:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Generates random name with desired length without seed. Name is generated using a-zA-z0-9 characters</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)randomStringNameWithLength:(int)<em>length</em> useSeed:(BOOL)<em>useSeed</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>length</code></th>
+						<td><p>desired length of string</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>useSeed</code></th>
+						<td><p>BOOL indicates if random generator should use seed</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>name random name</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GKRandomizer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/randomStringNumberWithLength:" title="randomStringNumberWithLength:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/randomStringNumberWithLength:">+&nbsp;randomStringNumberWithLength:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Generates random string using 0-9 characters without seed</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)randomStringNumberWithLength:(int)<em>length</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>length</code></th>
+						<td><p>desired length of string</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>name random name</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GKRandomizer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/randomStringNumberWithLength:useSeed:" title="randomStringNumberWithLength:useSeed:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/randomStringNumberWithLength:useSeed:">+&nbsp;randomStringNumberWithLength:useSeed:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Generates random string using 0-9 characters</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)randomStringNumberWithLength:(int)<em>length</em> useSeed:(BOOL)<em>useSeed</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>length</code></th>
+						<td><p>desired length of string</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>useSeed</code></th>
+						<td><p>BOOL indicates if random generator should use seed</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>name random name</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GKRandomizer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/randomStringWithCharctersFromString:andLength:" title="randomStringWithCharctersFromString:andLength:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/randomStringWithCharctersFromString:andLength:">+&nbsp;randomStringWithCharctersFromString:andLength:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Generates random string using provided character from NSString without seed</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)randomStringWithCharctersFromString:(NSString *)<em>charset</em> andLength:(int)<em>length</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>charset</code></th>
+						<td><p>string containing all available charaters to randomize from</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>length</code></th>
+						<td><p>desired length of string</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>name random string build from randomizing provided characters</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GKRandomizer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/randomStringWithCharctersFromString:andLength:useSeed:" title="randomStringWithCharctersFromString:andLength:useSeed:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/randomStringWithCharctersFromString:andLength:useSeed:">+&nbsp;randomStringWithCharctersFromString:andLength:useSeed:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Generates random string using provided character from NSString</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)randomStringWithCharctersFromString:(NSString *)<em>charset</em> andLength:(int)<em>length</em> useSeed:(BOOL)<em>useSeed</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>charset</code></th>
+						<td><p>string containing all available charaters to randomize from</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>length</code></th>
+						<td><p>desired length of string</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>useSeed</code></th>
+						<td><p>BOOL indicates if random generator should use seed</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>name random string build from randomizing provided characters</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GKRandomizer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/randomElementFromArray:" title="randomElementFromArray:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/randomElementFromArray:">+&nbsp;randomElementFromArray:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns random element from an array</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (id)randomElementFromArray:(NSArray *)<em>array</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>array</code></th>
+						<td><p>array with elements</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>name random element (can be nil if array was nil)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GKRandomizer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/randomElementFromArray:useSeed:" title="randomElementFromArray:useSeed:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/randomElementFromArray:useSeed:">+&nbsp;randomElementFromArray:useSeed:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns random element from an array</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (id)randomElementFromArray:(NSArray *)<em>array</em> useSeed:(BOOL)<em>useSeed</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>array</code></th>
+						<td><p>array with elements</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>useSeed</code></th>
+						<td><p>BOOL indicates if random generator should use seed</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>name random element (can be nil if array was nil)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GKRandomizer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/randomElementFromDictionary:" title="randomElementFromDictionary:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/randomElementFromDictionary:">+&nbsp;randomElementFromDictionary:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns random element from a dictionary</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (id)randomElementFromDictionary:(NSDictionary *)<em>dictionary</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dictionary</code></th>
+						<td><p>dictionary with elements</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>name random element (can be nil if array was nil)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GKRandomizer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/randomElementFromDictionary:useSeed:" title="randomElementFromDictionary:useSeed:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/randomElementFromDictionary:useSeed:">+&nbsp;randomElementFromDictionary:useSeed:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns random element from a dictionary</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (id)randomElementFromDictionary:(NSDictionary *)<em>dictionary</em> useSeed:(BOOL)<em>useSeed</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dictionary</code></th>
+						<td><p>dictionary with elements</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>useSeed</code></th>
+						<td><p>BOOL indicates if random generator should use seed</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>name random element (can be nil if array was nil)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GKRandomizer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/randomSeed" title="randomSeed"></a>
+	<h3 class="method-title"><code><a href="#//api/name/randomSeed">+&nbsp;randomSeed</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Generate random seed value that can be used for seeding</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (unsigned)randomSeed</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>random seed value</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/setSeed:">+ setSeed:</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GKRandomizer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setSeed:" title="setSeed:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setSeed:">+&nbsp;setSeed:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set seed value for all seeded methods</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setSeed:(unsigned)<em>seed</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>seed</code></th>
+						<td><p>Seed value</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GKRandomizer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 Grzegorz Krukowski. All rights reserved. Updated: 2015-08-12</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

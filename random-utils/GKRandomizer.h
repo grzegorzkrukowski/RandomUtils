@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+/*!
+ * Randomizer utils
+ */
+
 @interface GKRandomizer : NSObject
 
 #pragma mark - Generate random numbers
@@ -120,14 +124,17 @@
 /*!
  * Generates random string using provided character from NSString without seed
  *
+ * @param charset string containing all available charaters to randomize from
  * @param length desired length of string
  * @return name random string build from randomizing provided characters
  */
+
 + (NSString *) randomStringWithCharctersFromString:(NSString*) charset andLength: (int) length;
 
 /*!
  * Generates random string using provided character from NSString
  *
+ * @param charset string containing all available charaters to randomize from
  * @param length desired length of string
  * @param useSeed BOOL indicates if random generator should use seed
  * @return name random string build from randomizing provided characters

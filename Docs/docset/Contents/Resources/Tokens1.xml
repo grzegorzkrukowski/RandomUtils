@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/GKRandomizer.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/GKRandomizer</TokenIdentifier>
+			<Abstract type="html">Randomizer utils</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+            
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomIntBetweenMin:andMax:useSeed:</TokenIdentifier>
+			<Abstract type="html">Returns random int between given minimum (inclusive) and maximum (inclusive) and option to use seed</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/setSeed:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>+ (int)randomIntBetweenMin:(int)min andMax:(int)max useSeed:(BOOL)useSeed</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>min</Name>
+					<Abstract type="html">Minimum value</Abstract>
+				</Parameter><Parameter>
+					<Name>max</Name>
+					<Abstract type="html">Maximum value</Abstract>
+				</Parameter><Parameter>
+					<Name>useSeed</Name>
+					<Abstract type="html">BOOL indicates if random generator should use seed</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">random int between min (inclusive) and max (inclusive)</Abstract></ReturnValue>
+			<Anchor>//api/name/randomIntBetweenMin:andMax:useSeed:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomIntBetweenMin:andMax:</TokenIdentifier>
+			<Abstract type="html">Returns random int between given minimum (inclusive) and maximum (inclusive) without seed</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+			<Declaration>+ (int)randomIntBetweenMin:(int)min andMax:(int)max</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>min</Name>
+					<Abstract type="html">Minimum value</Abstract>
+				</Parameter><Parameter>
+					<Name>max</Name>
+					<Abstract type="html">Maximum value</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">random int between min (inclusive) and max (inclusive)</Abstract></ReturnValue>
+			<Anchor>//api/name/randomIntBetweenMin:andMax:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomFloatBetweenMin:andMax:useSeed:</TokenIdentifier>
+			<Abstract type="html">Returns random float between given minimum (inclusive) and maximum (inclusive) and option to use seed</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/setSeed:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>+ (float)randomFloatBetweenMin:(float)min andMax:(float)max useSeed:(BOOL)useSeed</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>min</Name>
+					<Abstract type="html">Minimum value</Abstract>
+				</Parameter><Parameter>
+					<Name>max</Name>
+					<Abstract type="html">Maximum value</Abstract>
+				</Parameter><Parameter>
+					<Name>useSeed</Name>
+					<Abstract type="html">BOOL indicates if random generator should use seed</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">random float between min (inclusive) and max (inclusive)</Abstract></ReturnValue>
+			<Anchor>//api/name/randomFloatBetweenMin:andMax:useSeed:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomFloatBetweenMin:andMax:</TokenIdentifier>
+			<Abstract type="html">Returns random float between given minimum (inclusive) and maximum (inclusive) without seed</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+			<Declaration>+ (float)randomFloatBetweenMin:(float)min andMax:(float)max</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>min</Name>
+					<Abstract type="html">Minimum value</Abstract>
+				</Parameter><Parameter>
+					<Name>max</Name>
+					<Abstract type="html">Maximum value</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">random float between min (inclusive) and max (inclusive)</Abstract></ReturnValue>
+			<Anchor>//api/name/randomFloatBetweenMin:andMax:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomEventOccurs:useSeed:</TokenIdentifier>
+			<Abstract type="html">Checks if random event should happen based on a given probability from 0.0f to 100.0f (0.0f - never, 100.0f - always) and option to use seed</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/setSeed:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>+ (BOOL)randomEventOccurs:(float)chance useSeed:(BOOL)useSeed</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>chance</Name>
+					<Abstract type="html">Desired probability for an event</Abstract>
+				</Parameter><Parameter>
+					<Name>useSeed</Name>
+					<Abstract type="html">BOOL indicates if random generator should use seed</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">results BOOL YES if event should occur, which means random probability &gt; desired chance</Abstract></ReturnValue>
+			<Anchor>//api/name/randomEventOccurs:useSeed:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomEventOccurs:</TokenIdentifier>
+			<Abstract type="html">Checks if random event should happen based on a given probability from 0.0f to 100.0f (0.0f - never, 100.0f - always) without seed</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+			<Declaration>+ (BOOL)randomEventOccurs:(float)chance</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>chance</Name>
+					<Abstract type="html">Desired probability for an event</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">results BOOL YES if event should occur, which means random probability &gt; desired chance</Abstract></ReturnValue>
+			<Anchor>//api/name/randomEventOccurs:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomStringNameWithLength:</TokenIdentifier>
+			<Abstract type="html">Generates random name with desired length without seed. Name is generated using a-zA-z0-9 characters</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)randomStringNameWithLength:(int)length</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>length</Name>
+					<Abstract type="html">desired length of string</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">name random name</Abstract></ReturnValue>
+			<Anchor>//api/name/randomStringNameWithLength:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomStringNameWithLength:useSeed:</TokenIdentifier>
+			<Abstract type="html">Generates random name with desired length without seed. Name is generated using a-zA-z0-9 characters</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)randomStringNameWithLength:(int)length useSeed:(BOOL)useSeed</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>length</Name>
+					<Abstract type="html">desired length of string</Abstract>
+				</Parameter><Parameter>
+					<Name>useSeed</Name>
+					<Abstract type="html">BOOL indicates if random generator should use seed</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">name random name</Abstract></ReturnValue>
+			<Anchor>//api/name/randomStringNameWithLength:useSeed:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomStringNumberWithLength:</TokenIdentifier>
+			<Abstract type="html">Generates random string using 0-9 characters without seed</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)randomStringNumberWithLength:(int)length</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>length</Name>
+					<Abstract type="html">desired length of string</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">name random name</Abstract></ReturnValue>
+			<Anchor>//api/name/randomStringNumberWithLength:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomStringNumberWithLength:useSeed:</TokenIdentifier>
+			<Abstract type="html">Generates random string using 0-9 characters</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)randomStringNumberWithLength:(int)length useSeed:(BOOL)useSeed</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>length</Name>
+					<Abstract type="html">desired length of string</Abstract>
+				</Parameter><Parameter>
+					<Name>useSeed</Name>
+					<Abstract type="html">BOOL indicates if random generator should use seed</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">name random name</Abstract></ReturnValue>
+			<Anchor>//api/name/randomStringNumberWithLength:useSeed:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomStringWithCharctersFromString:andLength:</TokenIdentifier>
+			<Abstract type="html">Generates random string using provided character from NSString without seed</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)randomStringWithCharctersFromString:(NSString *)charset andLength:(int)length</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>charset</Name>
+					<Abstract type="html">string containing all available charaters to randomize from</Abstract>
+				</Parameter><Parameter>
+					<Name>length</Name>
+					<Abstract type="html">desired length of string</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">name random string build from randomizing provided characters</Abstract></ReturnValue>
+			<Anchor>//api/name/randomStringWithCharctersFromString:andLength:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomStringWithCharctersFromString:andLength:useSeed:</TokenIdentifier>
+			<Abstract type="html">Generates random string using provided character from NSString</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)randomStringWithCharctersFromString:(NSString *)charset andLength:(int)length useSeed:(BOOL)useSeed</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>charset</Name>
+					<Abstract type="html">string containing all available charaters to randomize from</Abstract>
+				</Parameter><Parameter>
+					<Name>length</Name>
+					<Abstract type="html">desired length of string</Abstract>
+				</Parameter><Parameter>
+					<Name>useSeed</Name>
+					<Abstract type="html">BOOL indicates if random generator should use seed</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">name random string build from randomizing provided characters</Abstract></ReturnValue>
+			<Anchor>//api/name/randomStringWithCharctersFromString:andLength:useSeed:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomElementFromArray:</TokenIdentifier>
+			<Abstract type="html">Returns random element from an array</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+			<Declaration>+ (id)randomElementFromArray:(NSArray *)array</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>array</Name>
+					<Abstract type="html">array with elements</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">name random element (can be nil if array was nil)</Abstract></ReturnValue>
+			<Anchor>//api/name/randomElementFromArray:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomElementFromArray:useSeed:</TokenIdentifier>
+			<Abstract type="html">Returns random element from an array</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+			<Declaration>+ (id)randomElementFromArray:(NSArray *)array useSeed:(BOOL)useSeed</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>array</Name>
+					<Abstract type="html">array with elements</Abstract>
+				</Parameter><Parameter>
+					<Name>useSeed</Name>
+					<Abstract type="html">BOOL indicates if random generator should use seed</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">name random element (can be nil if array was nil)</Abstract></ReturnValue>
+			<Anchor>//api/name/randomElementFromArray:useSeed:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomElementFromDictionary:</TokenIdentifier>
+			<Abstract type="html">Returns random element from a dictionary</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+			<Declaration>+ (id)randomElementFromDictionary:(NSDictionary *)dictionary</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>dictionary</Name>
+					<Abstract type="html">dictionary with elements</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">name random element (can be nil if array was nil)</Abstract></ReturnValue>
+			<Anchor>//api/name/randomElementFromDictionary:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomElementFromDictionary:useSeed:</TokenIdentifier>
+			<Abstract type="html">Returns random element from a dictionary</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+			<Declaration>+ (id)randomElementFromDictionary:(NSDictionary *)dictionary useSeed:(BOOL)useSeed</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>dictionary</Name>
+					<Abstract type="html">dictionary with elements</Abstract>
+				</Parameter><Parameter>
+					<Name>useSeed</Name>
+					<Abstract type="html">BOOL indicates if random generator should use seed</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">name random element (can be nil if array was nil)</Abstract></ReturnValue>
+			<Anchor>//api/name/randomElementFromDictionary:useSeed:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomSeed</TokenIdentifier>
+			<Abstract type="html">Generate random seed value that can be used for seeding</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/setSeed:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>+ (unsigned)randomSeed</Declaration>
+			
+			<ReturnValue><Abstract type="html">random seed value</Abstract></ReturnValue>
+			<Anchor>//api/name/randomSeed</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/setSeed:</TokenIdentifier>
+			<Abstract type="html">Set seed value for all seeded methods</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+			<Declaration>+ (void)setSeed:(unsigned)seed</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>seed</Name>
+					<Abstract type="html">Seed value</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setSeed:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>
