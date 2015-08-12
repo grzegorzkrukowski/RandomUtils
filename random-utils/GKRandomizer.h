@@ -238,6 +238,22 @@
 
 + (UIColor*) randomColorUseSeed:(BOOL) useSeed;
 
+#pragma mark - Shuffling
+
+/**
+ *  Shuffles array
+ *
+ *  @param array shuffled array
+ */
++ (void) shuffleArray:(NSMutableArray*) array;
+
+/**
+ *  Shuffles array
+ *  @param useSeed BOOL indicates if random generator should use seed
+ *  @param array shuffled array
+ */
++ (void) shuffleArray:(NSMutableArray*) array useSeed:(BOOL) seed;
+
 #pragma mark - Seed helpers
 
 /*!

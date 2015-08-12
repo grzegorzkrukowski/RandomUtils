@@ -223,6 +223,22 @@
     return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
 }
 
+#pragma mark - Shuffling
+
++ (void) shuffleArray:(NSMutableArray*) array
+{
+    [[self class] shuffleArray:array useSeed:NO];
+}
+
++ (void) shuffleArray:(NSMutableArray*) array useSeed:(BOOL) seed
+{
+    for (int i = (int)[array count] - 1; i > 0; i--)
+    {
+        int j = [[self class] randomIntBetweenMin:0 andMax:i+1];
+        [array exchangeObjectAtIndex:j withObjectAtIndex:i];
+    }
+}
+
 #pragma mark - Seed helpers
 
 + (unsigned) randomSeed

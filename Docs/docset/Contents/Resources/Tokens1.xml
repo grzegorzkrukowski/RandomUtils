@@ -445,6 +445,43 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/shuffleArray:</TokenIdentifier>
+			<Abstract type="html">Shuffles array</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+			<Declaration>+ (void)shuffleArray:(NSMutableArray *)array</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>array</Name>
+					<Abstract type="html">shuffled array</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/shuffleArray:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/shuffleArray:useSeed:</TokenIdentifier>
+			<Abstract type="html">Shuffles array</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+			<Declaration>+ (void)shuffleArray:(NSMutableArray *)array useSeed:(BOOL)seed</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>array</Name>
+					<Abstract type="html">shuffled array</Abstract>
+				</Parameter><Parameter>
+					<Name>useSeed</Name>
+					<Abstract type="html">BOOL indicates if random generator should use seed</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/shuffleArray:useSeed:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomSeed</TokenIdentifier>
 			<Abstract type="html">Generate random seed value that can be used for seeding</Abstract>
 			<DeclaredIn>GKRandomizer.h</DeclaredIn>

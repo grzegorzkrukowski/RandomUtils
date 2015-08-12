@@ -244,4 +244,14 @@
     XCTAssertNotNil(randomColor);
 }
 
+- (void) testShuffleArray
+{
+    NSArray* array = @[@(1), @(2), @(3), @(4), @(5), @(6), @(7)];
+    NSMutableArray* mutableArray = [array mutableCopy];
+    [GKRandomizer shuffleArray:mutableArray];
+    XCTAssertEqual([array count], [mutableArray count]);
+
+    XCTAssertFalse([array isEqualToArray:mutableArray]);
+}
+
 @end
