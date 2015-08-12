@@ -35,6 +35,17 @@ Installation
 
 To use utils just drag the files into your project.
 
+Installation with CocoaPods
+--------------
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like AFNetworking in your projects. 
+
+#### Podfile
+
+```ruby
+pod “random-utils”
+```
+
 ARC
 ------------------
 
