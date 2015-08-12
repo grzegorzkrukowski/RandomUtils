@@ -10,13 +10,14 @@
 
 //private interface
 @interface GKRandomizer ()
-+ (void) setSeed:(unsigned)seed;
-+ (int) randomIntBetweenMin:(int)min andMax:(int)max andSeeded:(BOOL) seeded;
 @end
 
 @implementation GKRandomizer
 
-#pragma mark - Private methods
++ (unsigned) randomSeed
+{
+    return arc4random_uniform(INT_MAX);
+}
 
 + (void) setSeed:(unsigned)seed
 {
@@ -66,15 +67,13 @@
 
 #pragma mark - Seeded Methods
 
-+ (int) randomIntBetweenMin:(int)min andMax:(int)max andSeed:(unsigned) seed
++ (int) randomSeedIntBetweenMin:(int)min andMax:(int)max
 {
-    [[self class] setSeed:seed];
     return [[self class] randomIntBetweenMin:min andMax:max andSeeded:YES];
 }
 
-+ (float) randomFloatBetweenMin:(float)min andMax:(float)max andSeed:(unsigned int)seed;
++ (float) randomSeedFloatBetweenMin:(float)min andMax:(float)max
 {
-    [[self class] setSeed:seed];
     return [[self class] randomFloatBetweenMin:min andMax:max seeded:YES];
 }
 

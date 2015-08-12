@@ -10,7 +10,7 @@
 
 @interface GKRandomizer : NSObject
 
-#pragma mark - Not Seeded Methods
+#pragma mark - Methods not using seed
 
 /*!
  * Returns random int between given minimum (inclusive) and maximum (inclusive) using not seeded random generator
@@ -34,18 +34,34 @@
 
 + (float) randomFloatBetweenMin:(float)min andMax:(float)max;
 
-#pragma mark - Seeded Methods
+#pragma mark - Methods using seed
+
+/*!
+ * Generate random seed value that can be used for seeding
+ * @see setSeed:
+ * @return random seed value
+ */
+
++ (unsigned) randomSeed;
+
+/*!
+ * Set seed value for all seeded methods
+ *
+ * @param seed Seed value
+ */
+
++ (void) setSeed:(unsigned)seed;
 
 /*!
  * Returns random int between given minimum (inclusive) and maximum (inclusive) using seeded random generator
  *
  * @param min Minimum value
  * @param max Maximum value
- * @param seed Seed value for random generator
+ * @see setSeed:
  * @return random int between min (inclusive) and max (inclusive)
  */
 
-+ (int) randomIntBetweenMin:(int)min andMax:(int)max andSeed:(unsigned) seed;
++ (int) randomSeedIntBetweenMin:(int)min andMax:(int)max;
 
 /*!
  * Returns random float between given minimum (inclusive) and maximum (inclusive) using seeded random generator
@@ -54,10 +70,10 @@
  * Problem of calculating range is solved by scaling up float values.
  * @param min Minimum value
  * @param max Maximum value
- * @param seed Seed value for random generator
+ * @see setSeed:
  * @return random float between min (inclusive) and max (inclusive)
  */
 
-+ (float) randomFloatBetweenMin:(float)min andMax:(float)max andSeed:(unsigned) seed;
++ (float) randomSeedFloatBetweenMin:(float)min andMax:(float)max;
 
 @end

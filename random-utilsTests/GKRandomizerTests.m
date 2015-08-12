@@ -21,11 +21,6 @@
 
 @implementation GKRandomizerTests
 
-- (unsigned) seed
-{
-    return arc4random_uniform(INT_MAX);
-}
-
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -48,6 +43,11 @@
 
 - (void) testRandomIntBetweenSeeded:(BOOL) seeded
 {
+    if(seeded)
+    {
+        [GKRandomizer setSeed:[GKRandomizer randomSeed]];
+    }
+
     //keeping range small, to make sure testing border hits always works
     int min = 5;
     int max = 10;
@@ -60,7 +60,7 @@
     {
         if(seeded)
         {
-            random = [GKRandomizer randomIntBetweenMin:min andMax:max andSeed:[self seed]];
+            random = [GKRandomizer randomSeedIntBetweenMin:min andMax:max];
         }
         else
         {
@@ -99,6 +99,11 @@
 
 - (void) testRandomFloatBetweenSeeded:(BOOL) seeded
 {
+    if(seeded)
+    {
+        [GKRandomizer setSeed:[GKRandomizer randomSeed]];
+    }
+
     //for floats we just check if they are in range, can make range bigger
     float min = 5.0f;
     float max = 1005.0f;
@@ -108,7 +113,7 @@
     {
         if(seeded)
         {
-            random = [GKRandomizer randomFloatBetweenMin:min andMax:max andSeed:[self seed]];
+            random = [GKRandomizer randomSeedFloatBetweenMin:min andMax:max];
         }
         else
         {
