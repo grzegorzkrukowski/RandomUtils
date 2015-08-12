@@ -43,7 +43,7 @@ Installation with CocoaPods
 #### Podfile
 
 ```ruby
-pod “random-utils”
+pod 'random-utils'
 ```
 
 ARC
