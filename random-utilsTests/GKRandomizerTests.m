@@ -160,4 +160,31 @@
     XCTAssertEqualWithAccuracy(numberOfOccurences, ITERATIONS_FEW * 0.5f, ITERATIONS_FEW / 0.1f);
 }
 
+- (void) testRandomName
+{
+    int length = 10;
+    NSString* randomName = [GKRandomizer randomStringNameWithLength:length];
+    XCTAssertEqual(length, [randomName length]);
+
+    unsigned seed = [GKRandomizer randomSeed];
+    [GKRandomizer setSeed:seed];
+    NSString* randomNameSeed = [GKRandomizer randomStringNameWithLength:length useSeed:YES];
+    [GKRandomizer setSeed:seed];
+    XCTAssertEqualObjects(randomNameSeed, [GKRandomizer randomStringNameWithLength:length useSeed:YES]);
+}
+
+- (void) testRandomStringWithCharctersFromString
+{
+    int length = 10;
+    NSString* charset = @"qweasdzxc";
+    NSString* randomString = [GKRandomizer randomStringWithCharctersFromString:charset andLength:length];
+
+    for (int i = 0; i < [randomString length]; i++)
+    {
+        unichar character = [randomString characterAtIndex:i];
+        BOOL characterInCharset = [randomString rangeOfString:[NSString stringWithFormat:@"%c", character]].location != NSNotFound;
+        XCTAssertTrue(characterInCharset);
+    }
+}
+
 @end
