@@ -217,9 +217,9 @@
 
 + (UIColor*) randomColorUseSeed:(BOOL)useSeed
 {
-    CGFloat hue = [[self class] randomIntBetweenMin:0 andMax:255];
-    CGFloat saturation = [[self class] randomIntBetweenMin:0 andMax:255];
-    CGFloat brightness = [[self class] randomIntBetweenMin:0 andMax:255];
+    CGFloat hue = [[self class] randomFloatBetweenMin:0.0f andMax:1.0f];
+    CGFloat saturation = [[self class] randomFloatBetweenMin:0.0f andMax:1.0f];
+    CGFloat brightness = [[self class] randomFloatBetweenMin:0.0f andMax:1.0f];
     return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
 }
 

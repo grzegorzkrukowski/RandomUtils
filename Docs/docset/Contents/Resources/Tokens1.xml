@@ -169,7 +169,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomStringNameWithLength:useSeed:</TokenIdentifier>
-			<Abstract type="html">Generates random name with desired length without seed. Name is generated using a-zA-z0-9 characters</Abstract>
+			<Abstract type="html">Generates random name with desired length. Name is generated using a-zA-z0-9 characters</Abstract>
 			<DeclaredIn>GKRandomizer.h</DeclaredIn>
 			
 			<Declaration>+ (NSString *)randomStringNameWithLength:(int)length useSeed:(BOOL)useSeed</Declaration>
@@ -338,6 +338,109 @@
 			</Parameters>
 			<ReturnValue><Abstract type="html">name random element (can be nil if array was nil)</Abstract></ReturnValue>
 			<Anchor>//api/name/randomElementFromDictionary:useSeed:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomIndexWeighted:</TokenIdentifier>
+			<Abstract type="html">Randomize index value based on weights provided in array without seed</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+			<Declaration>+ (int)randomIndexWeighted:(NSArray *)weights</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>weights</Name>
+					<Abstract type="html">NSArray with NSNumbers with corresponding weights</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">index randomized index</Abstract></ReturnValue>
+			<Anchor>//api/name/randomIndexWeighted:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomIndexWeighted:useSeed:</TokenIdentifier>
+			<Abstract type="html">Randomize index value based on weights provided in array</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+			<Declaration>+ (int)randomIndexWeighted:(NSArray *)weights useSeed:(BOOL)useSeed</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>weights</Name>
+					<Abstract type="html">NSArray with NSNumbers with corresponding weights</Abstract>
+				</Parameter><Parameter>
+					<Name>useSeed</Name>
+					<Abstract type="html">BOOL indicates if random generator should use seed</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">index randomized index</Abstract></ReturnValue>
+			<Anchor>//api/name/randomIndexWeighted:useSeed:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomKeyBasedOnWeights:</TokenIdentifier>
+			<Abstract type="html">Randomize key based on weights provided in NSDictionary as key values (NSNumbers) without seed</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+			<Declaration>+ (id)randomKeyBasedOnWeights:(NSDictionary *)weights</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>weights</Name>
+					<Abstract type="html">NSDictionary with NSNumber values representing weight for key</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">key randomized key</Abstract></ReturnValue>
+			<Anchor>//api/name/randomKeyBasedOnWeights:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomKeyBasedOnWeights:useSeed:</TokenIdentifier>
+			<Abstract type="html">Randomize key based on weights provided in NSDictionary as key values (NSNumbers)</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+			<Declaration>+ (id)randomKeyBasedOnWeights:(NSDictionary *)weights useSeed:(BOOL)useSeed</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>weights</Name>
+					<Abstract type="html">NSDictionary with NSNumber values representing weight for key</Abstract>
+				</Parameter><Parameter>
+					<Name>useSeed</Name>
+					<Abstract type="html">BOOL indicates if random generator should use seed</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">key randomized key</Abstract></ReturnValue>
+			<Anchor>//api/name/randomKeyBasedOnWeights:useSeed:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomColor</TokenIdentifier>
+			<Abstract type="html">Randomize a color without seed</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+			<Declaration>+ (UIColor *)randomColor</Declaration>
+			
+			<ReturnValue><Abstract type="html">random color</Abstract></ReturnValue>
+			<Anchor>//api/name/randomColor</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomColorUseSeed:</TokenIdentifier>
+			<Abstract type="html">Randomize a color without seed</Abstract>
+			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			
+			<Declaration>+ (UIColor *)randomColorUseSeed:(BOOL)useSeed</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>useSeed</Name>
+					<Abstract type="html">BOOL indicates if random generator should use seed</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">random color</Abstract></ReturnValue>
+			<Anchor>//api/name/randomColorUseSeed:</Anchor>
             <NodeRef refid="1"/>
 		</Token>
 		

@@ -222,7 +222,20 @@
 
 #pragma mark - Random Color
 
+/**
+ *  Randomize a color without seed
+ *
+ *  @return random color
+ */
+
 + (UIColor*) randomColor;
+
+/**
+ *  Randomize a color without seed
+ *  @param useSeed BOOL indicates if random generator should use seed
+ *  @return random color
+ */
+
 + (UIColor*) randomColorUseSeed:(BOOL) useSeed;
 
 #pragma mark - Seed helpers
