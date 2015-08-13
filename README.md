@@ -30,6 +30,21 @@ NSLog(@"%d", [RandomUtils randomIntBetweenMin:0 andMax:100 useSeed:YES]); //82
 NSLog(@"%d", [RandomUtils randomIntBetweenMin:0 andMax:100 useSeed:YES]); //60
 ```
 
+Weighted randomization
+--------------
+
+Weighter randomization provides an easy way to randomly select an item from NSArray on NSDictionary based on weight connected to every element.
+
+```Objective-C
+NSArray* weights = @[@(75), @(24), @(1)];
+int index = [RandomUtils randomIndexWeighted:weights];
+```
+
+In example above:
+- first element has 75% chance to be randomed (75 / (75+24+1))
+- second element has 24% chance to be randomed (25 / (75+24+1))
+- third element has 1% chance to be randomed (1 / (75+24+1)) 
+
 Installation
 --------------
 
