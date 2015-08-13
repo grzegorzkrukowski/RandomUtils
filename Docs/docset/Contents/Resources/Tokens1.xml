@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/GKRandomizer.html">
+	<File path="Classes/RandomUtils.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/GKRandomizer</TokenIdentifier>
-			<Abstract type="html">Randomizer utils</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/RandomUtils</TokenIdentifier>
+			<Abstract type="html">RandomUtils</Abstract>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
             
 			
 			<NodeRef refid="1"/>
@@ -13,12 +13,12 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomIntBetweenMin:andMax:useSeed:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/randomIntBetweenMin:andMax:useSeed:</TokenIdentifier>
 			<Abstract type="html">Returns random int between given minimum (inclusive) and maximum (inclusive) and option to use seed</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/setSeed:</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/setSeed:</TokenIdentifier>
 		
 	</RelatedTokens>
 	
@@ -41,9 +41,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomIntBetweenMin:andMax:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/randomIntBetweenMin:andMax:</TokenIdentifier>
 			<Abstract type="html">Returns random int between given minimum (inclusive) and maximum (inclusive) without seed</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 			<Declaration>+ (int)randomIntBetweenMin:(int)min andMax:(int)max</Declaration>
 			<Parameters>
@@ -61,12 +61,12 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomFloatBetweenMin:andMax:useSeed:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/randomFloatBetweenMin:andMax:useSeed:</TokenIdentifier>
 			<Abstract type="html">Returns random float between given minimum (inclusive) and maximum (inclusive) and option to use seed</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/setSeed:</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/setSeed:</TokenIdentifier>
 		
 	</RelatedTokens>
 	
@@ -89,9 +89,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomFloatBetweenMin:andMax:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/randomFloatBetweenMin:andMax:</TokenIdentifier>
 			<Abstract type="html">Returns random float between given minimum (inclusive) and maximum (inclusive) without seed</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 			<Declaration>+ (float)randomFloatBetweenMin:(float)min andMax:(float)max</Declaration>
 			<Parameters>
@@ -109,12 +109,12 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomEventOccurs:useSeed:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/randomEventOccurs:useSeed:</TokenIdentifier>
 			<Abstract type="html">Checks if random event should happen based on a given probability from 0.0f to 100.0f (0.0f - never, 100.0f - always) and option to use seed</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/setSeed:</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/setSeed:</TokenIdentifier>
 		
 	</RelatedTokens>
 	
@@ -134,9 +134,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomEventOccurs:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/randomEventOccurs:</TokenIdentifier>
 			<Abstract type="html">Checks if random event should happen based on a given probability from 0.0f to 100.0f (0.0f - never, 100.0f - always) without seed</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 			<Declaration>+ (BOOL)randomEventOccurs:(float)chance</Declaration>
 			<Parameters>
@@ -151,9 +151,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomStringNameWithLength:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/randomStringNameWithLength:</TokenIdentifier>
 			<Abstract type="html">Generates random name with desired length without seed. Name is generated using a-zA-z0-9 characters</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 			<Declaration>+ (NSString *)randomStringNameWithLength:(int)length</Declaration>
 			<Parameters>
@@ -168,9 +168,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomStringNameWithLength:useSeed:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/randomStringNameWithLength:useSeed:</TokenIdentifier>
 			<Abstract type="html">Generates random name with desired length. Name is generated using a-zA-z0-9 characters</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 			<Declaration>+ (NSString *)randomStringNameWithLength:(int)length useSeed:(BOOL)useSeed</Declaration>
 			<Parameters>
@@ -188,9 +188,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomStringNumberWithLength:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/randomStringNumberWithLength:</TokenIdentifier>
 			<Abstract type="html">Generates random string using 0-9 characters without seed</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 			<Declaration>+ (NSString *)randomStringNumberWithLength:(int)length</Declaration>
 			<Parameters>
@@ -205,9 +205,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomStringNumberWithLength:useSeed:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/randomStringNumberWithLength:useSeed:</TokenIdentifier>
 			<Abstract type="html">Generates random string using 0-9 characters</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 			<Declaration>+ (NSString *)randomStringNumberWithLength:(int)length useSeed:(BOOL)useSeed</Declaration>
 			<Parameters>
@@ -225,9 +225,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomStringWithCharctersFromString:andLength:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/randomStringWithCharctersFromString:andLength:</TokenIdentifier>
 			<Abstract type="html">Generates random string using provided character from NSString without seed</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 			<Declaration>+ (NSString *)randomStringWithCharctersFromString:(NSString *)charset andLength:(int)length</Declaration>
 			<Parameters>
@@ -245,9 +245,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomStringWithCharctersFromString:andLength:useSeed:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/randomStringWithCharctersFromString:andLength:useSeed:</TokenIdentifier>
 			<Abstract type="html">Generates random string using provided character from NSString</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 			<Declaration>+ (NSString *)randomStringWithCharctersFromString:(NSString *)charset andLength:(int)length useSeed:(BOOL)useSeed</Declaration>
 			<Parameters>
@@ -268,9 +268,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomElementFromArray:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/randomElementFromArray:</TokenIdentifier>
 			<Abstract type="html">Returns random element from an array</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 			<Declaration>+ (id)randomElementFromArray:(NSArray *)array</Declaration>
 			<Parameters>
@@ -285,9 +285,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomElementFromArray:useSeed:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/randomElementFromArray:useSeed:</TokenIdentifier>
 			<Abstract type="html">Returns random element from an array</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 			<Declaration>+ (id)randomElementFromArray:(NSArray *)array useSeed:(BOOL)useSeed</Declaration>
 			<Parameters>
@@ -305,9 +305,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomElementFromDictionary:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/randomElementFromDictionary:</TokenIdentifier>
 			<Abstract type="html">Returns random element from a dictionary</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 			<Declaration>+ (id)randomElementFromDictionary:(NSDictionary *)dictionary</Declaration>
 			<Parameters>
@@ -322,9 +322,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomElementFromDictionary:useSeed:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/randomElementFromDictionary:useSeed:</TokenIdentifier>
 			<Abstract type="html">Returns random element from a dictionary</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 			<Declaration>+ (id)randomElementFromDictionary:(NSDictionary *)dictionary useSeed:(BOOL)useSeed</Declaration>
 			<Parameters>
@@ -342,9 +342,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomIndexWeighted:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/randomIndexWeighted:</TokenIdentifier>
 			<Abstract type="html">Randomize index value based on weights provided in array without seed</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 			<Declaration>+ (int)randomIndexWeighted:(NSArray *)weights</Declaration>
 			<Parameters>
@@ -359,9 +359,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomIndexWeighted:useSeed:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/randomIndexWeighted:useSeed:</TokenIdentifier>
 			<Abstract type="html">Randomize index value based on weights provided in array</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 			<Declaration>+ (int)randomIndexWeighted:(NSArray *)weights useSeed:(BOOL)useSeed</Declaration>
 			<Parameters>
@@ -379,9 +379,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomKeyBasedOnWeights:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/randomKeyBasedOnWeights:</TokenIdentifier>
 			<Abstract type="html">Randomize key based on weights provided in NSDictionary as key values (NSNumbers) without seed</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 			<Declaration>+ (id)randomKeyBasedOnWeights:(NSDictionary *)weights</Declaration>
 			<Parameters>
@@ -396,9 +396,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomKeyBasedOnWeights:useSeed:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/randomKeyBasedOnWeights:useSeed:</TokenIdentifier>
 			<Abstract type="html">Randomize key based on weights provided in NSDictionary as key values (NSNumbers)</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 			<Declaration>+ (id)randomKeyBasedOnWeights:(NSDictionary *)weights useSeed:(BOOL)useSeed</Declaration>
 			<Parameters>
@@ -416,9 +416,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomColor</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/randomColor</TokenIdentifier>
 			<Abstract type="html">Randomize a color without seed</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 			<Declaration>+ (UIColor *)randomColor</Declaration>
 			
@@ -428,9 +428,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomColorUseSeed:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/randomColorUseSeed:</TokenIdentifier>
 			<Abstract type="html">Randomize a color without seed</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 			<Declaration>+ (UIColor *)randomColorUseSeed:(BOOL)useSeed</Declaration>
 			<Parameters>
@@ -445,9 +445,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/shuffleArray:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/shuffleArray:</TokenIdentifier>
 			<Abstract type="html">Shuffles array</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 			<Declaration>+ (void)shuffleArray:(NSMutableArray *)array</Declaration>
 			<Parameters>
@@ -462,9 +462,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/shuffleArray:useSeed:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/shuffleArray:useSeed:</TokenIdentifier>
 			<Abstract type="html">Shuffles array</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 			<Declaration>+ (void)shuffleArray:(NSMutableArray *)array useSeed:(BOOL)seed</Declaration>
 			<Parameters>
@@ -482,12 +482,12 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/randomSeed</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/randomSeed</TokenIdentifier>
 			<Abstract type="html">Generate random seed value that can be used for seeding</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/setSeed:</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/setSeed:</TokenIdentifier>
 		
 	</RelatedTokens>
 	
@@ -499,9 +499,9 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/GKRandomizer/setSeed:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/RandomUtils/setSeed:</TokenIdentifier>
 			<Abstract type="html">Set seed value for all seeded methods</Abstract>
-			<DeclaredIn>GKRandomizer.h</DeclaredIn>
+			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
 			<Declaration>+ (void)setSeed:(unsigned)seed</Declaration>
 			<Parameters>

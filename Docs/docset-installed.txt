@@ -1,4 +1,4 @@
 Documentation set was installed to Xcode!
 
-Path: /Users/Grzegorz/Library/Developer/Shared/Documentation/DocSets/com.grzegorzkrukowski.random-utils.docset
-Time: 2015-08-12 15:29:17 +0000
+Path: /Users/Grzegorz/Library/Developer/Shared/Documentation/DocSets/com.grzegorzkrukowski.RandomUtils.docset
+Time: 2015-08-13 07:50:26 +0000
