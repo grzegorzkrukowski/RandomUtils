@@ -14,7 +14,7 @@ Example:
 
 ```Objective-C
 unsigned seed = 100;
-[GKRandomizer setSeed:seed];
+[RandomUtils setSeed:seed];
 NSLog(@"%d", [RandomUtils randomIntBetweenMin:0 andMax:100 useSeed:YES]); //31
 NSLog(@"%d", [RandomUtils randomIntBetweenMin:0 andMax:100 useSeed:YES]); //74
 NSLog(@"%d", [RandomUtils randomIntBetweenMin:0 andMax:100 useSeed:YES]); //62
@@ -22,11 +22,11 @@ NSLog(@"%d", [RandomUtils randomIntBetweenMin:0 andMax:100 useSeed:YES]); //82
 NSLog(@"%d", [RandomUtils randomIntBetweenMin:0 andMax:100 useSeed:YES]); //60
 
 //reseeding the randomizer
-[GKRandomizer setSeed:seed];
+[RandomUtils setSeed:seed];
 NSLog(@"%d", [RandomUtils randomIntBetweenMin:0 andMax:100 useSeed:YES]); //31
 NSLog(@"%d", [RandomUtils randomIntBetweenMin:0 andMax:100 useSeed:YES]); //74
 NSLog(@"%d", [RandomUtils randomIntBetweenMin:0 andMax:100 useSeed:YES]); //62
-NSLog(@"%d", [GKRandomizer randomIntBetweenMin:0 andMax:100 useSeed:YES]); //82
+NSLog(@"%d", [RandomUtils randomIntBetweenMin:0 andMax:100 useSeed:YES]); //82
 NSLog(@"%d", [RandomUtils randomIntBetweenMin:0 andMax:100 useSeed:YES]); //60
 ```
 
