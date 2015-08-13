@@ -230,7 +230,7 @@
     [[self class] shuffleArray:array useSeed:NO];
 }
 
-+ (void) shuffleArray:(NSMutableArray*) array useSeed:(BOOL) seed
++ (void) shuffleArray:(NSMutableArray*) array useSeed:(BOOL) useSeed
 {
     for (int i = (int)[array count] - 1; i > 0; i--)
     {

@@ -252,7 +252,7 @@
  *  @param useSeed BOOL indicates if random generator should use seed
  *  @param array shuffled array
  */
-+ (void) shuffleArray:(NSMutableArray*) array useSeed:(BOOL) seed;
++ (void) shuffleArray:(NSMutableArray*) array useSeed:(BOOL) useSeed;
 
 #pragma mark - Seed helpers
 

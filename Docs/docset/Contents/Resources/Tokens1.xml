@@ -466,7 +466,7 @@
 			<Abstract type="html">Shuffles array</Abstract>
 			<DeclaredIn>RandomUtils.h</DeclaredIn>
 			
-			<Declaration>+ (void)shuffleArray:(NSMutableArray *)array useSeed:(BOOL)seed</Declaration>
+			<Declaration>+ (void)shuffleArray:(NSMutableArray *)array useSeed:(BOOL)useSeed</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>array</Name>
