@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:random-utils.xcodeproj">
+      location = "self:/Users/Grzegorz/projects/RandomUtils/RandomUtils.xcodeproj">
    </FileRef>
 </Workspace>

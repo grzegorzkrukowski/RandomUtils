@@ -1,18 +1,18 @@
 //
-//  GKRandomizer.h
-//  random-utils
+//  RandomUtils.m
+//  RandomUtils
 //
 //  Created by Grzegorz Krukowski on 11/08/15.
 //  Copyright (c) 2015 GrzegorzKrukowski. All rights reserved.
 //
 
-#import "GKRandomizer.h"
+#import "RandomUtils.h"
 
 //private interface
-@interface GKRandomizer ()
+@interface RandomUtils ()
 @end
 
-@implementation GKRandomizer
+@implementation RandomUtils
 
 #pragma mark - Generating random numbers
 

@@ -1,4 +1,4 @@
-# random-utils
+# RandomUtils
 
 General
 --------------
@@ -15,19 +15,19 @@ Example:
 ```Objective-C
 unsigned seed = 100;
 [GKRandomizer setSeed:seed];
-NSLog(@"%d", [GKRandomizer randomIntBetweenMin:0 andMax:100 useSeed:YES]); //31
-NSLog(@"%d", [GKRandomizer randomIntBetweenMin:0 andMax:100 useSeed:YES]); //74
-NSLog(@"%d", [GKRandomizer randomIntBetweenMin:0 andMax:100 useSeed:YES]); //62
-NSLog(@"%d", [GKRandomizer randomIntBetweenMin:0 andMax:100 useSeed:YES]); //82
-NSLog(@"%d", [GKRandomizer randomIntBetweenMin:0 andMax:100 useSeed:YES]); //60
+NSLog(@"%d", [RandomUtils randomIntBetweenMin:0 andMax:100 useSeed:YES]); //31
+NSLog(@"%d", [RandomUtils randomIntBetweenMin:0 andMax:100 useSeed:YES]); //74
+NSLog(@"%d", [RandomUtils randomIntBetweenMin:0 andMax:100 useSeed:YES]); //62
+NSLog(@"%d", [RandomUtils randomIntBetweenMin:0 andMax:100 useSeed:YES]); //82
+NSLog(@"%d", [RandomUtils randomIntBetweenMin:0 andMax:100 useSeed:YES]); //60
 
 //reseeding the randomizer
 [GKRandomizer setSeed:seed];
-NSLog(@"%d", [GKRandomizer randomIntBetweenMin:0 andMax:100 useSeed:YES]); //31
-NSLog(@"%d", [GKRandomizer randomIntBetweenMin:0 andMax:100 useSeed:YES]); //74
-NSLog(@"%d", [GKRandomizer randomIntBetweenMin:0 andMax:100 useSeed:YES]); //62
+NSLog(@"%d", [RandomUtils randomIntBetweenMin:0 andMax:100 useSeed:YES]); //31
+NSLog(@"%d", [RandomUtils randomIntBetweenMin:0 andMax:100 useSeed:YES]); //74
+NSLog(@"%d", [RandomUtils randomIntBetweenMin:0 andMax:100 useSeed:YES]); //62
 NSLog(@"%d", [GKRandomizer randomIntBetweenMin:0 andMax:100 useSeed:YES]); //82
-NSLog(@"%d", [GKRandomizer randomIntBetweenMin:0 andMax:100 useSeed:YES]); //60
+NSLog(@"%d", [RandomUtils randomIntBetweenMin:0 andMax:100 useSeed:YES]); //60
 ```
 
 Installation
@@ -43,7 +43,7 @@ Installation with CocoaPods
 #### Podfile
 
 ```ruby
-pod 'random-utils'
+pod 'RandomUtils'
 ```
 
 ARC
@@ -59,4 +59,4 @@ Grzegorz Krukowski, grkrukowski@gmail.com
 License
 ------------------
 
-GKRandomizer is available under the MIT license. See the LICENSE file for more info.
+RandomUtils is available under the MIT license. See the LICENSE file for more info.

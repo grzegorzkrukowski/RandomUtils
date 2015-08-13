@@ -1,5 +1,5 @@
 //
-//  GKRandomizerTests.m
+//  RandomUtilsTests.m
 //  random-utils
 //
 //  Created by Grzegorz Krukowski on 11/08/15.
@@ -8,18 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "GKRandomizer.h"
+#import "RandomUtils.h"
 
 //testing random numbers usually required few iterations to gather results, to make sure tests are not failing randomly
 #define ITERATIONS_SINGLE 1
 #define ITERATIONS_FEW 100
 #define ITERATIONS_MANY 1000
 
-@interface GKRandomizerTests : XCTestCase
+@interface RandomUtilsTests : XCTestCase
 
 @end
 
-@implementation GKRandomizerTests
+@implementation RandomUtilsTests
 
 - (void)setUp {
     [super setUp];
@@ -45,7 +45,7 @@
 {
     if(useSeed)
     {
-        [GKRandomizer setSeed:[GKRandomizer randomSeed]];
+        [RandomUtils setSeed:[RandomUtils randomSeed]];
     }
 
     //keeping range small, to make sure testing border hits always works
@@ -58,7 +58,7 @@
     int random = 0;
     for (int i = 0; i < ITERATIONS_MANY; i++)
     {
-        random = [GKRandomizer randomIntBetweenMin:min andMax:max useSeed:useSeed];
+        random = [RandomUtils randomIntBetweenMin:min andMax:max useSeed:useSeed];
 
         if(random == min)
         {
@@ -82,20 +82,20 @@
 
 - (void) testSeeding
 {
-    unsigned seed = [GKRandomizer randomSeed];
-    [GKRandomizer setSeed:seed];
+    unsigned seed = [RandomUtils randomSeed];
+    [RandomUtils setSeed:seed];
 
     int min = 0;
     int max = 1000;
 
     //generate first number
-    int firstRandom = [GKRandomizer randomIntBetweenMin:min andMax:max useSeed:YES];
+    int firstRandom = [RandomUtils randomIntBetweenMin:min andMax:max useSeed:YES];
 
     //every other number should be same as first one if we reseed the generator
     for (int i = 0; i < ITERATIONS_FEW; i++)
     {
-        [GKRandomizer setSeed:seed];
-        int nextRandom = [GKRandomizer randomIntBetweenMin:min andMax:max useSeed:YES];
+        [RandomUtils setSeed:seed];
+        int nextRandom = [RandomUtils randomIntBetweenMin:min andMax:max useSeed:YES];
         XCTAssertEqual(firstRandom, nextRandom);
     }
 
@@ -105,7 +105,7 @@
     //still need to few iterations to make sure it's not randomly failing
     for (int i = 0; i < ITERATIONS_FEW; i++)
     {
-        int nextRandom = [GKRandomizer randomIntBetweenMin:min andMax:max useSeed:YES];
+        int nextRandom = [RandomUtils randomIntBetweenMin:min andMax:max useSeed:YES];
         if(nextRandom != firstRandom)
         {
             same = NO;
@@ -129,7 +129,7 @@
 {
     if(useSeed)
     {
-        [GKRandomizer setSeed:[GKRandomizer randomSeed]];
+        [RandomUtils setSeed:[RandomUtils randomSeed]];
     }
 
     //for floats we just check if they are in range, can make range bigger
@@ -139,7 +139,7 @@
     float random = 0;
     for (int i = 0; i < ITERATIONS_MANY; i++)
     {
-        random = [GKRandomizer randomFloatBetweenMin:min andMax:max useSeed:useSeed];
+        random = [RandomUtils randomFloatBetweenMin:min andMax:max useSeed:useSeed];
         //check if it's in range
         XCTAssertGreaterThanOrEqual(random, min);
         XCTAssertLessThanOrEqual(random, max);
@@ -151,9 +151,9 @@
     int numberOfOccurences = 0;
     for (int i = 0; i < ITERATIONS_FEW; i++)
     {
-        XCTAssertTrue([GKRandomizer randomEventOccurs:100.0f]);
-        XCTAssertFalse([GKRandomizer randomEventOccurs:0.0f]);
-        numberOfOccurences += [GKRandomizer randomEventOccurs:50.0f];
+        XCTAssertTrue([RandomUtils randomEventOccurs:100.0f]);
+        XCTAssertFalse([RandomUtils randomEventOccurs:0.0f]);
+        numberOfOccurences += [RandomUtils randomEventOccurs:50.0f];
     }
 
     //50.0f chance should be more less equal to half of iterations
@@ -163,21 +163,21 @@
 - (void) testRandomName
 {
     int length = 10;
-    NSString* randomName = [GKRandomizer randomStringNameWithLength:length];
+    NSString* randomName = [RandomUtils randomStringNameWithLength:length];
     XCTAssertEqual(length, [randomName length]);
 
-    unsigned seed = [GKRandomizer randomSeed];
-    [GKRandomizer setSeed:seed];
-    NSString* randomNameSeed = [GKRandomizer randomStringNameWithLength:length useSeed:YES];
-    [GKRandomizer setSeed:seed];
-    XCTAssertEqualObjects(randomNameSeed, [GKRandomizer randomStringNameWithLength:length useSeed:YES]);
+    unsigned seed = [RandomUtils randomSeed];
+    [RandomUtils setSeed:seed];
+    NSString* randomNameSeed = [RandomUtils randomStringNameWithLength:length useSeed:YES];
+    [RandomUtils setSeed:seed];
+    XCTAssertEqualObjects(randomNameSeed, [RandomUtils randomStringNameWithLength:length useSeed:YES]);
 }
 
 - (void) testRandomStringWithCharctersFromString
 {
     int length = 10;
     NSString* charset = @"qweasdzxc";
-    NSString* randomString = [GKRandomizer randomStringWithCharctersFromString:charset andLength:length];
+    NSString* randomString = [RandomUtils randomStringWithCharctersFromString:charset andLength:length];
 
     for (int i = 0; i < [randomString length]; i++)
     {
@@ -189,22 +189,22 @@
 
 - (void) testRandomElementFromArray
 {
-    XCTAssertNil([GKRandomizer randomElementFromArray:nil useSeed:NO]);
-    XCTAssertNil([GKRandomizer randomElementFromArray:nil useSeed:YES]);
+    XCTAssertNil([RandomUtils randomElementFromArray:nil useSeed:NO]);
+    XCTAssertNil([RandomUtils randomElementFromArray:nil useSeed:YES]);
 
     NSArray* array = @[@"a", @"b", @"c", @"d"];
-    XCTAssertNotNil([GKRandomizer randomElementFromArray:array useSeed:NO]);
-    XCTAssertNotNil([GKRandomizer randomElementFromArray:array useSeed:YES]);
+    XCTAssertNotNil([RandomUtils randomElementFromArray:array useSeed:NO]);
+    XCTAssertNotNil([RandomUtils randomElementFromArray:array useSeed:YES]);
 }
 
 - (void) testRandomElementFromDictionary
 {
-    XCTAssertNil([GKRandomizer randomElementFromDictionary:nil useSeed:NO]);
-    XCTAssertNil([GKRandomizer randomElementFromDictionary:nil useSeed:YES]);
+    XCTAssertNil([RandomUtils randomElementFromDictionary:nil useSeed:NO]);
+    XCTAssertNil([RandomUtils randomElementFromDictionary:nil useSeed:YES]);
 
     NSDictionary* dict = @{ @"a" : @"a", @"b" : @"b", @"c" : @"c" };
-    XCTAssertNotNil([GKRandomizer randomElementFromDictionary:dict useSeed:NO]);
-    XCTAssertNotNil([GKRandomizer randomElementFromDictionary:dict useSeed:YES]);
+    XCTAssertNotNil([RandomUtils randomElementFromDictionary:dict useSeed:NO]);
+    XCTAssertNotNil([RandomUtils randomElementFromDictionary:dict useSeed:YES]);
 }
 
 - (void) testWeightRandomizer
@@ -222,7 +222,7 @@
     int testsCount = ITERATIONS_MANY;
     for(int i = 0; i < testsCount; i++)
     {
-        int index = [GKRandomizer randomIndexWeighted:weights];
+        int index = [RandomUtils randomIndexWeighted:weights];
         NSNumber* number = [results objectAtIndex:index];
         [results replaceObjectAtIndex:index withObject:[NSNumber numberWithInt:[number intValue]+1]];
     }
@@ -240,7 +240,7 @@
 
 - (void) testRandomColor
 {
-    UIColor* randomColor = [GKRandomizer randomColor];
+    UIColor* randomColor = [RandomUtils randomColor];
     XCTAssertNotNil(randomColor);
 }
 
@@ -248,7 +248,7 @@
 {
     NSArray* array = @[@(1), @(2), @(3), @(4), @(5), @(6), @(7)];
     NSMutableArray* mutableArray = [array mutableCopy];
-    [GKRandomizer shuffleArray:mutableArray];
+    [RandomUtils shuffleArray:mutableArray];
     XCTAssertEqual([array count], [mutableArray count]);
 
     XCTAssertFalse([array isEqualToArray:mutableArray]);

@@ -21,10 +21,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		B2B1FDE11B7AA28A0091567D /* GKRandomizer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B2B1FDE01B7AA28A0091567D /* GKRandomizer.h */; };
-		B2B1FDE31B7AA28A0091567D /* GKRandomizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B1FDE21B7AA28A0091567D /* GKRandomizer.m */; };
-		B2B1FDE91B7AA28A0091567D /* librandom-utils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B1FDDD1B7AA28A0091567D /* librandom-utils.a */; };
-		B2B1FDF81B7AA35D0091567D /* GKRandomizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B1FDF71B7AA35D0091567D /* GKRandomizerTests.m */; };
+		B24514971B7C17C00008C61C /* RandomUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B24514931B7C17C00008C61C /* RandomUtils.m */; };
+		B24514981B7C17C00008C61C /* RandomUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B24514931B7C17C00008C61C /* RandomUtils.m */; };
+		B245149E1B7C18690008C61C /* RandomUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B24514951B7C17C00008C61C /* RandomUtilsTests.m */; };
+		B2B1FDE91B7AA28A0091567D /* libRandomUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B1FDDD1B7AA28A0091567D /* libRandomUtils.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,19 +44,18 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				B2B1FDE11B7AA28A0091567D /* GKRandomizer.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B2B1FDDD1B7AA28A0091567D /* librandom-utils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "librandom-utils.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2B1FDE01B7AA28A0091567D /* GKRandomizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKRandomizer.h; sourceTree = "<group>"; };
-		B2B1FDE21B7AA28A0091567D /* GKRandomizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKRandomizer.m; sourceTree = "<group>"; };
-		B2B1FDE81B7AA28A0091567D /* random-utilsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "random-utilsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2B1FDEE1B7AA28A0091567D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2B1FDF71B7AA35D0091567D /* GKRandomizerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRandomizerTests.m; sourceTree = "<group>"; };
+		B24514921B7C17C00008C61C /* RandomUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomUtils.h; sourceTree = "<group>"; };
+		B24514931B7C17C00008C61C /* RandomUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomUtils.m; sourceTree = "<group>"; };
+		B24514951B7C17C00008C61C /* RandomUtilsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomUtilsTests.m; sourceTree = "<group>"; };
+		B24514961B7C17C00008C61C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2B1FDDD1B7AA28A0091567D /* libRandomUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRandomUtils.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2B1FDE81B7AA28A0091567D /* RandomUtils.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomUtils.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,18 +70,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2B1FDE91B7AA28A0091567D /* librandom-utils.a in Frameworks */,
+				B2B1FDE91B7AA28A0091567D /* libRandomUtils.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B24514911B7C17C00008C61C /* RandomUtils */ = {
+			isa = PBXGroup;
+			children = (
+				B24514921B7C17C00008C61C /* RandomUtils.h */,
+				B24514931B7C17C00008C61C /* RandomUtils.m */,
+			);
+			path = RandomUtils;
+			sourceTree = "<group>";
+		};
+		B24514941B7C17C00008C61C /* RandomUtilsTests */ = {
+			isa = PBXGroup;
+			children = (
+				B24514951B7C17C00008C61C /* RandomUtilsTests.m */,
+				B24514961B7C17C00008C61C /* Info.plist */,
+			);
+			path = RandomUtilsTests;
+			sourceTree = "<group>";
+		};
 		B2B1FDD41B7AA28A0091567D = {
 			isa = PBXGroup;
 			children = (
-				B2B1FDDF1B7AA28A0091567D /* random-utils */,
-				B2B1FDEC1B7AA28A0091567D /* random-utilsTests */,
+				B24514911B7C17C00008C61C /* RandomUtils */,
+				B24514941B7C17C00008C61C /* RandomUtilsTests */,
 				B2B1FDDE1B7AA28A0091567D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,44 +107,18 @@
 		B2B1FDDE1B7AA28A0091567D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B2B1FDDD1B7AA28A0091567D /* librandom-utils.a */,
-				B2B1FDE81B7AA28A0091567D /* random-utilsTests.xctest */,
+				B2B1FDDD1B7AA28A0091567D /* libRandomUtils.a */,
+				B2B1FDE81B7AA28A0091567D /* RandomUtils.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		B2B1FDDF1B7AA28A0091567D /* random-utils */ = {
-			isa = PBXGroup;
-			children = (
-				B2B1FDE01B7AA28A0091567D /* GKRandomizer.h */,
-				B2B1FDE21B7AA28A0091567D /* GKRandomizer.m */,
-			);
-			path = "random-utils";
-			sourceTree = "<group>";
-		};
-		B2B1FDEC1B7AA28A0091567D /* random-utilsTests */ = {
-			isa = PBXGroup;
-			children = (
-				B2B1FDED1B7AA28A0091567D /* Supporting Files */,
-				B2B1FDF71B7AA35D0091567D /* GKRandomizerTests.m */,
-			);
-			path = "random-utilsTests";
-			sourceTree = "<group>";
-		};
-		B2B1FDED1B7AA28A0091567D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B2B1FDEE1B7AA28A0091567D /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B2B1FDDC1B7AA28A0091567D /* random-utils */ = {
+		B2B1FDDC1B7AA28A0091567D /* RandomUtils */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B2B1FDF11B7AA28A0091567D /* Build configuration list for PBXNativeTarget "random-utils" */;
+			buildConfigurationList = B2B1FDF11B7AA28A0091567D /* Build configuration list for PBXNativeTarget "RandomUtils" */;
 			buildPhases = (
 				B2B1FDD91B7AA28A0091567D /* Sources */,
 				B2B1FDDA1B7AA28A0091567D /* Frameworks */,
@@ -137,14 +128,14 @@
 			);
 			dependencies = (
 			);
-			name = "random-utils";
+			name = RandomUtils;
 			productName = "random-utils";
-			productReference = B2B1FDDD1B7AA28A0091567D /* librandom-utils.a */;
+			productReference = B2B1FDDD1B7AA28A0091567D /* libRandomUtils.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		B2B1FDE71B7AA28A0091567D /* random-utilsTests */ = {
+		B2B1FDE71B7AA28A0091567D /* RandomUtilsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B2B1FDF41B7AA28A0091567D /* Build configuration list for PBXNativeTarget "random-utilsTests" */;
+			buildConfigurationList = B2B1FDF41B7AA28A0091567D /* Build configuration list for PBXNativeTarget "RandomUtilsTests" */;
 			buildPhases = (
 				B2B1FDE41B7AA28A0091567D /* Sources */,
 				B2B1FDE51B7AA28A0091567D /* Frameworks */,
@@ -155,9 +146,9 @@
 			dependencies = (
 				B2B1FDEB1B7AA28A0091567D /* PBXTargetDependency */,
 			);
-			name = "random-utilsTests";
+			name = RandomUtilsTests;
 			productName = "random-utilsTests";
-			productReference = B2B1FDE81B7AA28A0091567D /* random-utilsTests.xctest */;
+			productReference = B2B1FDE81B7AA28A0091567D /* RandomUtils.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -166,7 +157,7 @@
 		B2B1FDD51B7AA28A0091567D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = GrzegorzKrukowski;
 				TargetAttributes = {
 					B2B1FDDC1B7AA28A0091567D = {
@@ -180,7 +171,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B2B1FDD81B7AA28A0091567D /* Build configuration list for PBXProject "random-utils" */;
+			buildConfigurationList = B2B1FDD81B7AA28A0091567D /* Build configuration list for PBXProject "RandomUtils" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -192,8 +183,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B2B1FDDC1B7AA28A0091567D /* random-utils */,
-				B2B1FDE71B7AA28A0091567D /* random-utilsTests */,
+				B2B1FDDC1B7AA28A0091567D /* RandomUtils */,
+				B2B1FDE71B7AA28A0091567D /* RandomUtilsTests */,
 				B2B1FDFB1B7B5CE10091567D /* Documentation */,
 			);
 		};
@@ -230,7 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2B1FDE31B7AA28A0091567D /* GKRandomizer.m in Sources */,
+				B24514971B7C17C00008C61C /* RandomUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +229,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2B1FDF81B7AA35D0091567D /* GKRandomizerTests.m in Sources */,
+				B245149E1B7C18690008C61C /* RandomUtilsTests.m in Sources */,
+				B24514981B7C17C00008C61C /* RandomUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +239,7 @@
 /* Begin PBXTargetDependency section */
 		B2B1FDEB1B7AA28A0091567D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B2B1FDDC1B7AA28A0091567D /* random-utils */;
+			target = B2B1FDDC1B7AA28A0091567D /* RandomUtils */;
 			targetProxy = B2B1FDEA1B7AA28A0091567D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -273,6 +265,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -335,7 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RandomUtils;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -344,7 +337,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RandomUtils;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -361,9 +354,9 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "random-utilsTests/Info.plist";
+				INFOPLIST_FILE = RandomUtilsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RandomUtils;
 			};
 			name = Debug;
 		};
@@ -375,9 +368,9 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "random-utilsTests/Info.plist";
+				INFOPLIST_FILE = RandomUtilsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RandomUtils;
 			};
 			name = Release;
 		};
@@ -398,7 +391,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B2B1FDD81B7AA28A0091567D /* Build configuration list for PBXProject "random-utils" */ = {
+		B2B1FDD81B7AA28A0091567D /* Build configuration list for PBXProject "RandomUtils" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B2B1FDEF1B7AA28A0091567D /* Debug */,
@@ -407,7 +400,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B2B1FDF11B7AA28A0091567D /* Build configuration list for PBXNativeTarget "random-utils" */ = {
+		B2B1FDF11B7AA28A0091567D /* Build configuration list for PBXNativeTarget "RandomUtils" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B2B1FDF21B7AA28A0091567D /* Debug */,
@@ -416,7 +409,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B2B1FDF41B7AA28A0091567D /* Build configuration list for PBXNativeTarget "random-utilsTests" */ = {
+		B2B1FDF41B7AA28A0091567D /* Build configuration list for PBXNativeTarget "RandomUtilsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B2B1FDF51B7AA28A0091567D /* Debug */,
@@ -432,6 +425,7 @@
 				B2B1FDFE1B7B5CE10091567D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
