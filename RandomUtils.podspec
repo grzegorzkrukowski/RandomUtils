@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RandomUtils"
-  s.version      = "0.2.3"
+  s.version      = "0.2.4"
   s.summary      = "Utilities to work with random numbers, strings, selecting random elements in Objective-C."
   s.description  = <<-DESC
                    * Generating random numbers
@@ -14,6 +14,6 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "Grzegorz Krukowski" => "grkrukowski@gmail.com" }
   s.platform     = :ios
-  s.source       = { :git => "https://github.com/grzegorzkrukowski/RandomUtils.git", :tag => "0.2.1" }
+  s.source       = { :git => "https://github.com/grzegorzkrukowski/RandomUtils.git", :tag => "0.2.4" }
   s.source_files  = "RandomUtils"
 end
