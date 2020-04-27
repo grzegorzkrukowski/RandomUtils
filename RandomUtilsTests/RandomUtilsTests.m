@@ -252,6 +252,16 @@
     XCTAssertEqual([array count], [mutableArray count]);
 
     XCTAssertFalse([array isEqualToArray:mutableArray]);
+    
+    //test seeded shuffle
+    unsigned seed = [RandomUtils randomSeed];
+    NSMutableArray* array1 = [array mutableCopy];
+    NSMutableArray* array2 = [array mutableCopy];
+    [RandomUtils setSeed:seed];
+    [RandomUtils shuffleArray:array1];
+    [RandomUtils setSeed:seed];
+    [RandomUtils shuffleArray:array2];
+    XCTAssertTrue([array1 isEqualToArray:array2]);
 }
 
 @end
