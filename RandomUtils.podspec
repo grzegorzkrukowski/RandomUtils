@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RandomUtils"
-  s.version      = "0.2.2"
+  s.version      = "0.2.3"
   s.summary      = "Utilities to work with random numbers, strings, selecting random elements in Objective-C."
   s.description  = <<-DESC
                    * Generating random numbers
