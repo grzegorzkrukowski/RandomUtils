@@ -234,7 +234,7 @@
 {
     for (int i = (int)[array count] - 1; i > 0; i--)
     {
-        int j = [[self class] randomIntBetweenMin:0 andMax:i+1];
+        int j = [[self class] randomIntBetweenMin:0 andMax:i];
         [array exchangeObjectAtIndex:j withObjectAtIndex:i];
     }
 }
