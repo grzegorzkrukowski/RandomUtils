@@ -258,9 +258,9 @@
     NSMutableArray* array1 = [array mutableCopy];
     NSMutableArray* array2 = [array mutableCopy];
     [RandomUtils setSeed:seed];
-    [RandomUtils shuffleArray:array1];
+    [RandomUtils shuffleArray:array1 useSeed:YES];
     [RandomUtils setSeed:seed];
-    [RandomUtils shuffleArray:array2];
+    [RandomUtils shuffleArray:array2 useSeed:YES];
     XCTAssertTrue([array1 isEqualToArray:array2]);
 }
 
